@@ -128,7 +128,7 @@ def get_cursor_from_path(sqlite_path):
     return cursor
 
 # execute predicted sql with a time limitation
-@func_set_timeout(120)
+@func_set_timeout(600)
 def execute_sql(cursor, sql):
     cursor.execute(sql)
 
@@ -162,6 +162,9 @@ def decode_natsqls(
 
             pred_natsql = pred_sequence.split("|")[-1].strip()
             pred_natsql = pred_natsql.replace("='", "= '").replace("!=", " !=").replace(",", " ,")
+
+            # print(pred_natsql)
+
             old_pred_natsql = pred_natsql
             # if the predicted natsql has some fatal errors, try to correct it
             pred_natsql = fix_fatal_errors_in_natsql(pred_natsql, batch_tc_original[batch_id])

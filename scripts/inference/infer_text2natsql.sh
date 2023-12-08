@@ -6,15 +6,19 @@ tables_for_natsql="./data/preprocessed_data/test_tables_for_natsql.json"
 if [ $1 = "base" ]
 then
     text2natsql_model_save_path="./models/text2natsql-t5-base/checkpoint-14352"
-    text2natsql_model_bs=16
+    text2natsql_model_bs=8
+elif [ $1 = "base-custom" ]
+then
+    text2natsql_model_save_path="./models/text2natsql-t5-base-custom/checkpoint-119952"
+    text2natsql_model_bs=8
 elif [ $1 = "large" ]
 then
     text2natsql_model_save_path="./models/text2natsql-t5-large/checkpoint-21216"
-    text2natsql_model_bs=8
+    text2natsql_model_bs=2
 elif [ $1 = "3b" ]
 then
     text2natsql_model_save_path="./models/text2natsql-t5-3b/checkpoint-78302"
-    text2natsql_model_bs=6
+    text2natsql_model_bs=2
 else
     echo "The first arg must in [base, large, 3b]."
     exit
@@ -161,6 +165,8 @@ else
     exit
 fi
 
+
+: '
 # prepare table file for natsql
 python NatSQL/table_transform.py \
     --in_file $table_path \
@@ -203,6 +209,7 @@ python text2sql_data_generator.py \
     --use_contents \
     --output_skeleton \
     --target_type "natsql"
+'
 
 # inference using the best text2natsql ckpt
 python text2sql.py \

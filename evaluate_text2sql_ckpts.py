@@ -44,7 +44,10 @@ if __name__ == "__main__":
     opt = parse_option()
     
     ckpt_names = os.listdir(opt.save_path)
-    ckpt_names = sorted(ckpt_names, key = lambda x:eval(x.split("-")[1]))
+    # ckpt_names = sorted(ckpt_names, key = lambda x:eval(x.split("-")[1]))
+    if 'custom' in opt.save_path:
+        ckpt_names = list(filter(lambda x: '119952' in x, ckpt_names))
+        # opt.save_path = opt.save_path.replace('-custom', '')
     
     print("ckpt_names:", ckpt_names)
 

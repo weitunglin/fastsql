@@ -147,6 +147,7 @@ def _train(opt):
 
     model.train()
     train_step = 0
+    print_count = 0
     for epoch in range(opt.epochs):
         print(f"This is epoch {epoch+1}.")
         for batch in train_dataloder:
@@ -157,11 +158,12 @@ def _train(opt):
             batch_db_ids = [data[2] for data in batch] # unused
             batch_tc_original = [data[3] for data in batch] # unused
             
-            if epoch == 0:
+            if epoch == 0 and print_count < 5:
                 for batch_id in range(len(batch_inputs)):
                     print(batch_inputs[batch_id])
                     print(batch_sqls[batch_id])
                     print("----------------------")
+                print_count = print_count + 1
 
             tokenized_inputs = text2sql_tokenizer(
                 batch_inputs, 
@@ -275,6 +277,10 @@ def _test(opt):
         batch_db_ids = [data[1] for data in batch]
         batch_tc_original = [data[2] for data in batch]
 
+        # print(batch_inputs)
+        # print(batch_db_ids)
+        # print(batch_tc_original)
+
         tokenized_inputs = tokenizer(
             batch_inputs, 
             return_tensors="pt",
@@ -300,6 +306,9 @@ def _test(opt):
             )
 
             model_outputs = model_outputs.view(len(batch_inputs), opt.num_return_sequences, model_outputs.shape[1])
+
+            # print(model_outputs)
+
             if opt.target_type == "sql":
                 predict_sqls += decode_sqls(
                     opt.db_path, 

@@ -1,0 +1,13 @@
+models/
+predictions/
+data/
+**/__pycache__/
+NatSQL/
+zips/
+data/
+database/
+*.swp
+__MACOSX/
+eval_results/
+third_party/
+tensorboard_log/
