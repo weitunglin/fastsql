@@ -1,8 +1,0 @@
-select count(*) from home_game join park on home_game.park_id = park.park_id where  home_game.year = 1907 and park.park_name = "Columbia Park"
-select count(*) from home_game join park on home_game.park_id = park.park_id where  home_game.year = 2000 and park.city = "Atlanta"
-select count(*) from home_game join park on home_game.park_id = park.park_id where  home_game.year = 2000 and park.city = "Atlanta"
-select sum(home_game.attendance) from home_game join team on home_game.team_id = team.team_id where  team.name = "Boston Red Stockings" and home_game.year between 2000 and 2010
-select sum(home_game.attendance) from home_game join team on home_game.team_id = team.team_id where  team.name = "Boston Red Stockings" and home_game.year between 2000 and 2010
-select sum(salary.salary) from salary join player on salary.player_id = player.player_id where  player.name_first = "Len" and player.name_last = "Barker" and salary.year between 1985 and 1990
-select sum(salary.salary) from salary join player on salary.player_id = player.player_id where  player.name_first = "Len" and player.name_last = "Barker" and salary.year between 1985 and 1990
-select player.name_first , player.name_last from salary join team join player where  salary.year = 2005 and team.name = "Washington Nationals"   intersect select player.name_first , player.name_last from salary join team join player where  salary.year = 2007 and team.name = "Washington Nationals"

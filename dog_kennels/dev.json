@@ -1,0 +1,2481 @@
+[
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT count(*) FROM Dogs WHERE dog_id NOT IN ( SELECT dog_id FROM Treatments )",
+        "query_toks": [
+            "SELECT",
+            "count",
+            "(",
+            "*",
+            ")",
+            "FROM",
+            "Dogs",
+            "WHERE",
+            "dog_id",
+            "NOT",
+            "IN",
+            "(",
+            "SELECT",
+            "dog_id",
+            "FROM",
+            "Treatments",
+            ")"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "dogs",
+            "where",
+            "dog_id",
+            "not",
+            "in",
+            "(",
+            "select",
+            "dog_id",
+            "from",
+            "treatments",
+            ")"
+        ],
+        "question": "How many dogs have not gone through any treatment?",
+        "question_toks": [
+            "How",
+            "many",
+            "dogs",
+            "have",
+            "not",
+            "gone",
+            "through",
+            "any",
+            "treatment",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    true,
+                    8,
+                    [
+                        0,
+                        [
+                            0,
+                            20,
+                            false
+                        ],
+                        null
+                    ],
+                    {
+                        "from": {
+                            "table_units": [
+                                [
+                                    "table_unit",
+                                    7
+                                ]
+                            ],
+                            "conds": []
+                        },
+                        "select": [
+                            false,
+                            [
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        [
+                                            0,
+                                            45,
+                                            false
+                                        ],
+                                        null
+                                    ]
+                                ]
+                            ]
+                        ],
+                        "where": [],
+                        "groupBy": [],
+                        "having": [],
+                        "orderBy": [],
+                        "limit": null,
+                        "intersect": null,
+                        "union": null,
+                        "except": null
+                    },
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "select count(*) from dogs where dog_id not in ( select dog_id from treatments )",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "dogs",
+            "where",
+            "dog_id",
+            "not",
+            "in",
+            "(",
+            "select",
+            "dog_id",
+            "from",
+            "treatments",
+            ")"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "dogs",
+            "where",
+            "dog_id",
+            "not",
+            "in",
+            "(",
+            "select",
+            "dog_id",
+            "from",
+            "treatments",
+            ")"
+        ],
+        "question": "Tell me the number of dogs that have not received any treatment .",
+        "question_toks": [
+            "Tell",
+            "me",
+            "the",
+            "number",
+            "of",
+            "dogs",
+            "that",
+            "have",
+            "not",
+            "received",
+            "any",
+            "treatment",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    true,
+                    8,
+                    [
+                        0,
+                        [
+                            0,
+                            20,
+                            false
+                        ],
+                        null
+                    ],
+                    {
+                        "from": {
+                            "table_units": [
+                                [
+                                    "table_unit",
+                                    7
+                                ]
+                            ],
+                            "conds": []
+                        },
+                        "select": [
+                            false,
+                            [
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        [
+                                            0,
+                                            45,
+                                            false
+                                        ],
+                                        null
+                                    ]
+                                ]
+                            ]
+                        ],
+                        "where": [],
+                        "groupBy": [],
+                        "having": [],
+                        "orderBy": [],
+                        "limit": null,
+                        "intersect": null,
+                        "union": null,
+                        "except": null
+                    },
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT count(*) FROM Owners WHERE owner_id NOT IN ( SELECT owner_id FROM Dogs )",
+        "query_toks": [
+            "SELECT",
+            "count",
+            "(",
+            "*",
+            ")",
+            "FROM",
+            "Owners",
+            "WHERE",
+            "owner_id",
+            "NOT",
+            "IN",
+            "(",
+            "SELECT",
+            "owner_id",
+            "FROM",
+            "Dogs",
+            ")"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "owners",
+            "where",
+            "owner_id",
+            "not",
+            "in",
+            "(",
+            "select",
+            "owner_id",
+            "from",
+            "dogs",
+            ")"
+        ],
+        "question": "How many owners temporarily do not have any dogs?",
+        "question_toks": [
+            "How",
+            "many",
+            "owners",
+            "temporarily",
+            "do",
+            "not",
+            "have",
+            "any",
+            "dogs",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        4
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    true,
+                    8,
+                    [
+                        0,
+                        [
+                            0,
+                            10,
+                            false
+                        ],
+                        null
+                    ],
+                    {
+                        "from": {
+                            "table_units": [
+                                [
+                                    "table_unit",
+                                    5
+                                ]
+                            ],
+                            "conds": []
+                        },
+                        "select": [
+                            false,
+                            [
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        [
+                                            0,
+                                            21,
+                                            false
+                                        ],
+                                        null
+                                    ]
+                                ]
+                            ]
+                        ],
+                        "where": [],
+                        "groupBy": [],
+                        "having": [],
+                        "orderBy": [],
+                        "limit": null,
+                        "intersect": null,
+                        "union": null,
+                        "except": null
+                    },
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT count(*) FROM Owners WHERE owner_id NOT IN ( SELECT owner_id FROM Dogs )",
+        "query_toks": [
+            "SELECT",
+            "count",
+            "(",
+            "*",
+            ")",
+            "FROM",
+            "Owners",
+            "WHERE",
+            "owner_id",
+            "NOT",
+            "IN",
+            "(",
+            "SELECT",
+            "owner_id",
+            "FROM",
+            "Dogs",
+            ")"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "owners",
+            "where",
+            "owner_id",
+            "not",
+            "in",
+            "(",
+            "select",
+            "owner_id",
+            "from",
+            "dogs",
+            ")"
+        ],
+        "question": "Find the number of owners who do not own any dogs at this moment.",
+        "question_toks": [
+            "Find",
+            "the",
+            "number",
+            "of",
+            "owners",
+            "who",
+            "do",
+            "not",
+            "own",
+            "any",
+            "dogs",
+            "at",
+            "this",
+            "moment",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        4
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    true,
+                    8,
+                    [
+                        0,
+                        [
+                            0,
+                            10,
+                            false
+                        ],
+                        null
+                    ],
+                    {
+                        "from": {
+                            "table_units": [
+                                [
+                                    "table_unit",
+                                    5
+                                ]
+                            ],
+                            "conds": []
+                        },
+                        "select": [
+                            false,
+                            [
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        [
+                                            0,
+                                            21,
+                                            false
+                                        ],
+                                        null
+                                    ]
+                                ]
+                            ]
+                        ],
+                        "where": [],
+                        "groupBy": [],
+                        "having": [],
+                        "orderBy": [],
+                        "limit": null,
+                        "intersect": null,
+                        "union": null,
+                        "except": null
+                    },
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT count(*) FROM Professionals WHERE professional_id NOT IN ( SELECT professional_id FROM Treatments )",
+        "query_toks": [
+            "SELECT",
+            "count",
+            "(",
+            "*",
+            ")",
+            "FROM",
+            "Professionals",
+            "WHERE",
+            "professional_id",
+            "NOT",
+            "IN",
+            "(",
+            "SELECT",
+            "professional_id",
+            "FROM",
+            "Treatments",
+            ")"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "professionals",
+            "where",
+            "professional_id",
+            "not",
+            "in",
+            "(",
+            "select",
+            "professional_id",
+            "from",
+            "treatments",
+            ")"
+        ],
+        "question": "How many professionals did not operate any treatment on dogs?",
+        "question_toks": [
+            "How",
+            "many",
+            "professionals",
+            "did",
+            "not",
+            "operate",
+            "any",
+            "treatment",
+            "on",
+            "dogs",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        6
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    true,
+                    8,
+                    [
+                        0,
+                        [
+                            0,
+                            33,
+                            false
+                        ],
+                        null
+                    ],
+                    {
+                        "from": {
+                            "table_units": [
+                                [
+                                    "table_unit",
+                                    7
+                                ]
+                            ],
+                            "conds": []
+                        },
+                        "select": [
+                            false,
+                            [
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        [
+                                            0,
+                                            46,
+                                            false
+                                        ],
+                                        null
+                                    ]
+                                ]
+                            ]
+                        ],
+                        "where": [],
+                        "groupBy": [],
+                        "having": [],
+                        "orderBy": [],
+                        "limit": null,
+                        "intersect": null,
+                        "union": null,
+                        "except": null
+                    },
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT count(*) FROM Professionals WHERE professional_id NOT IN ( SELECT professional_id FROM Treatments )",
+        "query_toks": [
+            "SELECT",
+            "count",
+            "(",
+            "*",
+            ")",
+            "FROM",
+            "Professionals",
+            "WHERE",
+            "professional_id",
+            "NOT",
+            "IN",
+            "(",
+            "SELECT",
+            "professional_id",
+            "FROM",
+            "Treatments",
+            ")"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "professionals",
+            "where",
+            "professional_id",
+            "not",
+            "in",
+            "(",
+            "select",
+            "professional_id",
+            "from",
+            "treatments",
+            ")"
+        ],
+        "question": "Find the number of professionals who have not treated any dogs.",
+        "question_toks": [
+            "Find",
+            "the",
+            "number",
+            "of",
+            "professionals",
+            "who",
+            "have",
+            "not",
+            "treated",
+            "any",
+            "dogs",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        6
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    true,
+                    8,
+                    [
+                        0,
+                        [
+                            0,
+                            33,
+                            false
+                        ],
+                        null
+                    ],
+                    {
+                        "from": {
+                            "table_units": [
+                                [
+                                    "table_unit",
+                                    7
+                                ]
+                            ],
+                            "conds": []
+                        },
+                        "select": [
+                            false,
+                            [
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        [
+                                            0,
+                                            46,
+                                            false
+                                        ],
+                                        null
+                                    ]
+                                ]
+                            ]
+                        ],
+                        "where": [],
+                        "groupBy": [],
+                        "having": [],
+                        "orderBy": [],
+                        "limit": null,
+                        "intersect": null,
+                        "union": null,
+                        "except": null
+                    },
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT name ,  age ,  weight FROM Dogs WHERE abandoned_yn  =  1",
+        "query_toks": [
+            "SELECT",
+            "name",
+            ",",
+            "age",
+            ",",
+            "weight",
+            "FROM",
+            "Dogs",
+            "WHERE",
+            "abandoned_yn",
+            "=",
+            "1"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "name",
+            ",",
+            "age",
+            ",",
+            "weight",
+            "from",
+            "dogs",
+            "where",
+            "abandoned_yn",
+            "=",
+            "value"
+        ],
+        "question": "List the dog name, age and weight of the dogs who have been abandoned? 1 stands for yes, and 0 stands for no.",
+        "question_toks": [
+            "List",
+            "the",
+            "dog",
+            "name",
+            ",",
+            "age",
+            "and",
+            "weight",
+            "of",
+            "the",
+            "dogs",
+            "who",
+            "have",
+            "been",
+            "abandoned",
+            "?",
+            "1",
+            "stands",
+            "for",
+            "yes",
+            ",",
+            "and",
+            "0",
+            "stands",
+            "for",
+            "no",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                25,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                26,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                29,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            22,
+                            false
+                        ],
+                        null
+                    ],
+                    1.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT name ,  age ,  weight FROM Dogs WHERE abandoned_yn  =  1",
+        "query_toks": [
+            "SELECT",
+            "name",
+            ",",
+            "age",
+            ",",
+            "weight",
+            "FROM",
+            "Dogs",
+            "WHERE",
+            "abandoned_yn",
+            "=",
+            "1"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "name",
+            ",",
+            "age",
+            ",",
+            "weight",
+            "from",
+            "dogs",
+            "where",
+            "abandoned_yn",
+            "=",
+            "value"
+        ],
+        "question": "What are the dog name, age and weight of the dogs that were abandoned? Note that 1 stands for yes, and 0 stands for no in the tables.",
+        "question_toks": [
+            "What",
+            "are",
+            "the",
+            "dog",
+            "name",
+            ",",
+            "age",
+            "and",
+            "weight",
+            "of",
+            "the",
+            "dogs",
+            "that",
+            "were",
+            "abandoned",
+            "?",
+            "Note",
+            "that",
+            "1",
+            "stands",
+            "for",
+            "yes",
+            ",",
+            "and",
+            "0",
+            "stands",
+            "for",
+            "no",
+            "in",
+            "the",
+            "tables",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                25,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                26,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                29,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            22,
+                            false
+                        ],
+                        null
+                    ],
+                    1.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT avg(age) FROM Dogs",
+        "query_toks": [
+            "SELECT",
+            "avg",
+            "(",
+            "age",
+            ")",
+            "FROM",
+            "Dogs"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "avg",
+            "(",
+            "age",
+            ")",
+            "from",
+            "dogs"
+        ],
+        "question": "What is the average age of all the dogs?",
+        "question_toks": [
+            "What",
+            "is",
+            "the",
+            "average",
+            "age",
+            "of",
+            "all",
+            "the",
+            "dogs",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        5,
+                        [
+                            0,
+                            [
+                                0,
+                                26,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT avg(age) FROM Dogs",
+        "query_toks": [
+            "SELECT",
+            "avg",
+            "(",
+            "age",
+            ")",
+            "FROM",
+            "Dogs"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "avg",
+            "(",
+            "age",
+            ")",
+            "from",
+            "dogs"
+        ],
+        "question": "Compute the average age of all the dogs.",
+        "question_toks": [
+            "Compute",
+            "the",
+            "average",
+            "age",
+            "of",
+            "all",
+            "the",
+            "dogs",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        5,
+                        [
+                            0,
+                            [
+                                0,
+                                26,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT max(age) FROM Dogs",
+        "query_toks": [
+            "SELECT",
+            "max",
+            "(",
+            "age",
+            ")",
+            "FROM",
+            "Dogs"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "max",
+            "(",
+            "age",
+            ")",
+            "from",
+            "dogs"
+        ],
+        "question": "What is the age of the oldest dog?",
+        "question_toks": [
+            "What",
+            "is",
+            "the",
+            "age",
+            "of",
+            "the",
+            "oldest",
+            "dog",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        1,
+                        [
+                            0,
+                            [
+                                0,
+                                26,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT max(age) FROM Dogs",
+        "query_toks": [
+            "SELECT",
+            "max",
+            "(",
+            "age",
+            ")",
+            "FROM",
+            "Dogs"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "max",
+            "(",
+            "age",
+            ")",
+            "from",
+            "dogs"
+        ],
+        "question": "Tell me the age of the oldest dog.",
+        "question_toks": [
+            "Tell",
+            "me",
+            "the",
+            "age",
+            "of",
+            "the",
+            "oldest",
+            "dog",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        1,
+                        [
+                            0,
+                            [
+                                0,
+                                26,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT charge_type ,  charge_amount FROM Charges",
+        "query_toks": [
+            "SELECT",
+            "charge_type",
+            ",",
+            "charge_amount",
+            "FROM",
+            "Charges"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "charge_type",
+            ",",
+            "charge_amount",
+            "from",
+            "charges"
+        ],
+        "question": "How much does each charge type costs? List both charge type and amount.",
+        "question_toks": [
+            "How",
+            "much",
+            "does",
+            "each",
+            "charge",
+            "type",
+            "costs",
+            "?",
+            "List",
+            "both",
+            "charge",
+            "type",
+            "and",
+            "amount",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        1
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                5,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT charge_type ,  charge_amount FROM Charges",
+        "query_toks": [
+            "SELECT",
+            "charge_type",
+            ",",
+            "charge_amount",
+            "FROM",
+            "Charges"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "charge_type",
+            ",",
+            "charge_amount",
+            "from",
+            "charges"
+        ],
+        "question": "List each charge type and its amount.",
+        "question_toks": [
+            "List",
+            "each",
+            "charge",
+            "type",
+            "and",
+            "its",
+            "amount",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        1
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                5,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT max(charge_amount) FROM Charges",
+        "query_toks": [
+            "SELECT",
+            "max",
+            "(",
+            "charge_amount",
+            ")",
+            "FROM",
+            "Charges"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "max",
+            "(",
+            "charge_amount",
+            ")",
+            "from",
+            "charges"
+        ],
+        "question": "How much does the most expensive charge type costs?",
+        "question_toks": [
+            "How",
+            "much",
+            "does",
+            "the",
+            "most",
+            "expensive",
+            "charge",
+            "type",
+            "costs",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        1
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        1,
+                        [
+                            0,
+                            [
+                                0,
+                                5,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT max(charge_amount) FROM Charges",
+        "query_toks": [
+            "SELECT",
+            "max",
+            "(",
+            "charge_amount",
+            ")",
+            "FROM",
+            "Charges"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "max",
+            "(",
+            "charge_amount",
+            ")",
+            "from",
+            "charges"
+        ],
+        "question": "What is the charge amount of the most expensive charge type?",
+        "question_toks": [
+            "What",
+            "is",
+            "the",
+            "charge",
+            "amount",
+            "of",
+            "the",
+            "most",
+            "expensive",
+            "charge",
+            "type",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        1
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        1,
+                        [
+                            0,
+                            [
+                                0,
+                                5,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT email_address ,  cell_number ,  home_phone FROM professionals",
+        "query_toks": [
+            "SELECT",
+            "email_address",
+            ",",
+            "cell_number",
+            ",",
+            "home_phone",
+            "FROM",
+            "professionals"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "email_address",
+            ",",
+            "cell_number",
+            ",",
+            "home_phone",
+            "from",
+            "professionals"
+        ],
+        "question": "List the email, cell phone and home phone of all the professionals.",
+        "question_toks": [
+            "List",
+            "the",
+            "email",
+            ",",
+            "cell",
+            "phone",
+            "and",
+            "home",
+            "phone",
+            "of",
+            "all",
+            "the",
+            "professionals",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        6
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                41,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                43,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                42,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT email_address ,  cell_number ,  home_phone FROM professionals",
+        "query_toks": [
+            "SELECT",
+            "email_address",
+            ",",
+            "cell_number",
+            ",",
+            "home_phone",
+            "FROM",
+            "professionals"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "email_address",
+            ",",
+            "cell_number",
+            ",",
+            "home_phone",
+            "from",
+            "professionals"
+        ],
+        "question": "What are the email, cell phone and home phone of each professional?",
+        "question_toks": [
+            "What",
+            "are",
+            "the",
+            "email",
+            ",",
+            "cell",
+            "phone",
+            "and",
+            "home",
+            "phone",
+            "of",
+            "each",
+            "professional",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        6
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                41,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                43,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                42,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT DISTINCT breed_code ,  size_code FROM dogs",
+        "query_toks": [
+            "SELECT",
+            "DISTINCT",
+            "breed_code",
+            ",",
+            "size_code",
+            "FROM",
+            "dogs"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "distinct",
+            "breed_code",
+            ",",
+            "size_code",
+            "from",
+            "dogs"
+        ],
+        "question": "What are all the possible breed type and size type combinations?",
+        "question_toks": [
+            "What",
+            "are",
+            "all",
+            "the",
+            "possible",
+            "breed",
+            "type",
+            "and",
+            "size",
+            "type",
+            "combinations",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                23,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                24,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT DISTINCT breed_code ,  size_code FROM dogs",
+        "query_toks": [
+            "SELECT",
+            "DISTINCT",
+            "breed_code",
+            ",",
+            "size_code",
+            "FROM",
+            "dogs"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "distinct",
+            "breed_code",
+            ",",
+            "size_code",
+            "from",
+            "dogs"
+        ],
+        "question": "Find the distinct breed type and size type combinations for dogs.",
+        "question_toks": [
+            "Find",
+            "the",
+            "distinct",
+            "breed",
+            "type",
+            "and",
+            "size",
+            "type",
+            "combinations",
+            "for",
+            "dogs",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                23,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                24,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT DISTINCT T1.first_name ,  T3.treatment_type_description FROM professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id JOIN Treatment_types AS T3 ON T2.treatment_type_code  =  T3.treatment_type_code",
+        "query_toks": [
+            "SELECT",
+            "DISTINCT",
+            "T1.first_name",
+            ",",
+            "T3.treatment_type_description",
+            "FROM",
+            "professionals",
+            "AS",
+            "T1",
+            "JOIN",
+            "Treatments",
+            "AS",
+            "T2",
+            "ON",
+            "T1.professional_id",
+            "=",
+            "T2.professional_id",
+            "JOIN",
+            "Treatment_types",
+            "AS",
+            "T3",
+            "ON",
+            "T2.treatment_type_code",
+            "=",
+            "T3.treatment_type_code"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "distinct",
+            "t1",
+            ".",
+            "first_name",
+            ",",
+            "t3",
+            ".",
+            "treatment_type_description",
+            "from",
+            "professionals",
+            "as",
+            "t1",
+            "join",
+            "treatments",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "professional_id",
+            "=",
+            "t2",
+            ".",
+            "professional_id",
+            "join",
+            "treatment_types",
+            "as",
+            "t3",
+            "on",
+            "t2",
+            ".",
+            "treatment_type_code",
+            "=",
+            "t3",
+            ".",
+            "treatment_type_code"
+        ],
+        "question": "List the first name of all the professionals along with the description of the treatment they have done.",
+        "question_toks": [
+            "List",
+            "the",
+            "first",
+            "name",
+            "of",
+            "all",
+            "the",
+            "professionals",
+            "along",
+            "with",
+            "the",
+            "description",
+            "of",
+            "the",
+            "treatment",
+            "they",
+            "have",
+            "done",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        6
+                    ],
+                    [
+                        "table_unit",
+                        7
+                    ],
+                    [
+                        "table_unit",
+                        3
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                33,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            46,
+                            false
+                        ],
+                        null
+                    ],
+                    "and",
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                47,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                35,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                9,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
+        "query": "SELECT DISTINCT T1.first_name ,  T3.treatment_type_description FROM professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id JOIN Treatment_types AS T3 ON T2.treatment_type_code  =  T3.treatment_type_code",
+        "query_toks": [
+            "SELECT",
+            "DISTINCT",
+            "T1.first_name",
+            ",",
+            "T3.treatment_type_description",
+            "FROM",
+            "professionals",
+            "AS",
+            "T1",
+            "JOIN",
+            "Treatments",
+            "AS",
+            "T2",
+            "ON",
+            "T1.professional_id",
+            "=",
+            "T2.professional_id",
+            "JOIN",
+            "Treatment_types",
+            "AS",
+            "T3",
+            "ON",
+            "T2.treatment_type_code",
+            "=",
+            "T3.treatment_type_code"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "distinct",
+            "t1",
+            ".",
+            "first_name",
+            ",",
+            "t3",
+            ".",
+            "treatment_type_description",
+            "from",
+            "professionals",
+            "as",
+            "t1",
+            "join",
+            "treatments",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "professional_id",
+            "=",
+            "t2",
+            ".",
+            "professional_id",
+            "join",
+            "treatment_types",
+            "as",
+            "t3",
+            "on",
+            "t2",
+            ".",
+            "treatment_type_code",
+            "=",
+            "t3",
+            ".",
+            "treatment_type_code"
+        ],
+        "question": "What are each professional's first name and description of the treatment they have performed?",
+        "question_toks": [
+            "What",
+            "are",
+            "each",
+            "professional",
+            "'s",
+            "first",
+            "name",
+            "and",
+            "description",
+            "of",
+            "the",
+            "treatment",
+            "they",
+            "have",
+            "performed",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        6
+                    ],
+                    [
+                        "table_unit",
+                        7
+                    ],
+                    [
+                        "table_unit",
+                        3
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                33,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            46,
+                            false
+                        ],
+                        null
+                    ],
+                    "and",
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                47,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                35,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                9,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    }
+]

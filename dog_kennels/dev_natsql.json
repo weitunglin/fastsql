@@ -1,0 +1,3174 @@
+[
+  {
+    "NatSQL": "select count ( dogs.* )  from dogs  where  @.@ not in treatments.* ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          12,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            50,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select count ( dogs.* )  from dogs  where  @.@ not in treatments.* ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          12,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            50,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select count ( owners.* )  from owners  where  @.@ not in dogs.* ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          12,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            24,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select count ( owners.* )  from owners  where  @.@ not in dogs.* ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          12,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            24,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select count ( professionals.* )  from professionals  where  @.@ not in treatments.* ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                38,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          12,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            50,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select count ( professionals.* )  from professionals  where  @.@ not in treatments.* ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                38,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          12,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            50,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select dogs.name , dogs.age , dogs.weight from dogs  where  dogs.abandoned_yn = 1 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                30,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              27,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select dogs.name , dogs.age , dogs.weight from dogs  where  dogs.abandoned_yn = 1 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                30,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              27,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select avg ( dogs.age )  from dogs ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select avg ( dogs.age )  from dogs ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select max ( dogs.age )  from dogs ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select max ( dogs.age )  from dogs ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select charges.charge_type , charges.charge_amount from charges ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select charges.charge_type , charges.charge_amount from charges ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select max ( charges.charge_amount )  from charges ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select max ( charges.charge_amount )  from charges ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select professionals.email_address , professionals.cell_number , professionals.home_phone from professionals ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                47,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                49,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                48,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select professionals.email_address , professionals.cell_number , professionals.home_phone from professionals ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                47,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                49,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                48,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select  distinct dogs.breed_code , dogs.size_code from dogs ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                29,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select  distinct dogs.breed_code , dogs.size_code from dogs ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                29,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select  distinct professionals.first_name , treatment_types.treatment_type_description from professionals ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                41,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select  distinct professionals.first_name , treatment_types.treatment_type_description from professionals ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                41,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "dog_kennels"
+    }
+  },
+  {
+    "NatSQL": "select count ( singer.* )  from singer ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select count ( singer.* )  from singer ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  order by singer.Net_Worth_Millions asc",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  order by singer.Net_Worth_Millions asc",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Birth_Year , singer.Citizenship from singer ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Birth_Year , singer.Citizenship from singer ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  where  singer.Citizenship != \"France\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"France\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  where  singer.Citizenship != \"France\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"France\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  where  singer.Birth_Year = 1948  or  singer.Birth_Year = 1949 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          1948,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          1949,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  where  singer.Birth_Year = 1948  or  singer.Birth_Year = 1949 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          1948,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          1949,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  order by singer.Net_Worth_Millions desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  order by singer.Net_Worth_Millions desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Citizenship , count ( singer.* )  from singer  group by singer.Citizenship ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Citizenship , count ( singer.* )  from singer  group by singer.Citizenship ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Citizenship from singer  group by singer.Citizenship  order by count ( singer.* )  desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Citizenship from singer  group by singer.Citizenship  order by count ( singer.* )  desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Citizenship , max ( singer.Net_Worth_Millions )  from singer  group by singer.Citizenship ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Citizenship , max ( singer.Net_Worth_Millions )  from singer  group by singer.Citizenship ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select song.Title , singer.Name from singer ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select song.Title , singer.Name from singer ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select  distinct singer.Name from singer  where  song.Sales > 300000 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          300000,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select  distinct singer.Name from singer  where  song.Sales > 300000 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          300000,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  where  count ( song.* )  > 1  group by singer.Name ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              6,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  where  count ( song.* )  > 1  group by singer.Name ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              6,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name , sum ( song.Sales )  from singer  group by singer.Name ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name , sum ( song.Sales )  from singer  group by singer.Name ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  where  @.@ not in song.* ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          12,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            6,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Name from singer  where  @.@ not in song.* ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          12,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            6,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Citizenship from singer  where  singer.Birth_Year < 1945  and  singer.Birth_Year > 1955 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          1945,
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          1955,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select singer.Citizenship from singer  where  singer.Birth_Year < 1945  and  singer.Birth_Year > 1955 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          1945,
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          1955,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "singer"
+    }
+  },
+  {
+    "NatSQL": "select count ( other_available_features.* )  from other_available_features ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "real_estate_properties"
+    }
+  },
+  {
+    "NatSQL": "select ref_feature_types.feature_type_name from other_available_features  where  other_available_features.feature_name = \"AirCon\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"AirCon\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "real_estate_properties"
+    }
+  },
+  {
+    "NatSQL": "select ref_property_types.property_type_description from ref_property_types  where  @.@ join properties.*  group by properties.property_type_code ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          15,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            11,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "real_estate_properties"
+    }
+  },
+  {
+    "NatSQL": "select properties.property_name from properties  where  properties.property_type_code = \"House\"  or  properties.property_type_code = \"Apartment\"  and  properties.room_count > 1 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"House\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"Apartment\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "real_estate_properties"
+    }
+  }
+]
