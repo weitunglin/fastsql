@@ -7,7 +7,36 @@ bash install_package.sh
 ```
 
 ```
-sh scripts/inference/infer_text2natsql.sh base spider
+gdown 1UWNj1ZADfKa1G5I4gBYCJeEQO6piMg4G
+gdown 1QyfSfHHrxfIM5X9gKUYNr_0ZRVvb1suV
+gdown 19tsgBGAxpagULSl9r85IFKIZb4kyBGGu
+gdown 1s4ItreFlTa8rUdzwVRmUR2Q9AHnxbNjo
+
+unzip -qq data.zip
+unzip -qq database.zip
+unzip -qq text2natsql-t5-base.zip
+unzip -qq text2natsql_schema_item_classifier.zip
+
+mkdir models/
+mv text2natsql_schema_item_classifier/ models/
+mv text2natsql-t5-base/ models/
+
+
+```
+
+```
+sh scripts/inference/infer_text2natsql.sh base spider 1
+
+after preprocess:
+    /workspace/resdsql/data/preprocessed_data/preprocessed_test_natsql.json
+    /workspace/resdsql/data/preprocessed_data/resdsql_test_natsql.json
+    /workspace/resdsql/data/preprocessed_data/test_tables_for_natsql.json
+    /workspace/resdsql/data/preprocessed_data/test_with_probs_natsql.json
+```
+
+```
+sh ./scripts/train/text2natsql/preprocess.sh
+sh ./scripts/train/text2natsql/generate_text2natsql_dataset.sh
 ```
 
 ```
