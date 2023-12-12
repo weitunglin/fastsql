@@ -175,34 +175,6 @@
   },
   {
     "db_id": "dog_kennels",
-    "input_sequence": "List the dog name, age and weight of the dogs who have been abandoned? 1 stands for yes, and 0 stands for no. | dogs : dogs.name , dogs.age , dogs.weight , dogs.abandoned_yn , dogs.gender , dogs.* | owners : owners.street , owners.city , owners.state , owners.owner_id , owners.first_name , owners.* | professionals : professionals.street , professionals.city , professionals.state , professionals.first_name , professionals.last_name , professionals.* | breeds : breeds.breed_name , breeds.breed_code , breeds.*",
-    "output_sequence": "select _ from _ where _ | select dogs.name , dogs.age , dogs.weight from dogs where dogs.abandoned_yn = 1",
-    "tc_original": [
-      "dogs.name",
-      "dogs.age",
-      "dogs.weight",
-      "dogs.abandoned_yn",
-      "dogs.gender",
-      "dogs.*",
-      "owners.street",
-      "owners.city",
-      "owners.state",
-      "owners.owner_id",
-      "owners.first_name",
-      "owners.*",
-      "professionals.street",
-      "professionals.city",
-      "professionals.state",
-      "professionals.first_name",
-      "professionals.last_name",
-      "professionals.*",
-      "breeds.breed_name",
-      "breeds.breed_code",
-      "breeds.*"
-    ]
-  },
-  {
-    "db_id": "dog_kennels",
     "input_sequence": "What are the dog name, age and weight of the dogs that were abandoned? Note that 1 stands for yes, and 0 stands for no in the tables. | dogs : dogs.abandoned_yn , dogs.name , dogs.age , dogs.weight , dogs.gender , dogs.* | owners : owners.street , owners.city , owners.state , owners.first_name , owners.last_name , owners.* | professionals : professionals.street , professionals.city , professionals.state , professionals.first_name , professionals.zip_code , professionals.* | breeds : breeds.breed_name , breeds.breed_code , breeds.*",
     "output_sequence": "select _ from _ where _ | select dogs.name , dogs.age , dogs.weight from dogs where dogs.abandoned_yn = 1",
     "tc_original": [

@@ -1,0 +1,47 @@
+# predicted SQL
+select count(*) from Dogs where  dogs.dog_id not in (select Treatments.dog_id from Treatments  )
+select count(*) from Dogs where  dogs.dog_id not in (select Treatments.dog_id from Treatments  )
+select count(*) from Owners where  owners.owner_id not in (select Dogs.owner_id from Dogs  )
+select count( distinct dogs.owner_id) from Dogs where  dogs.dog_id not in (select Dogs.dog_id from Dogs  )
+select count( distinct professionals.professional_id) from Professionals where  professionals.professional_id not in (select Treatments.professional_id from Treatments  )
+select count( distinct professionals.professional_id) from Professionals where  professionals.professional_id not in (select Treatments.professional_id from Treatments  )
+select dogs.name , dogs.age , dogs.weight from Dogs where  dogs.abandoned_yn = 1   intersect select dogs.name , dogs.age , dogs.weight from Dogs where  dogs.abandoned_yn = 0
+select dogs.name , dogs.age , dogs.weight from Dogs where  dogs.abandoned_yn = 1   intersect select dogs.name , dogs.age , dogs.weight from Dogs where  dogs.abandoned_yn = 0
+select avg(dogs.age) from Dogs
+select avg(dogs.age) from Dogs
+select dogs.age from Dogs   order by dogs.age desc limit 1
+select dogs.age from Dogs   order by dogs.age desc limit 1
+select charges.charge_type , sum(charges.charge_amount) from Charges  group by charges.charge_type
+select charges.charge_type , sum(charges.charge_amount) from Charges  group by charges.charge_type
+select charges.charge_amount from Charges   order by charges.charge_amount desc limit 1
+select charges.charge_amount from Charges   order by charges.charge_type desc limit 1
+select professionals.email_address , professionals.cell_number , professionals.home_phone from Professionals
+select professionals.email_address , professionals.cell_number , professionals.home_phone from Professionals
+select distinct dogs.breed_code , sizes.size_code from Dogs join Sizes on Dogs.size_code = Sizes.size_code
+select distinct dogs.breed_code , dogs.size_code from Dogs
+select professionals.first_name , treatment_types.treatment_type_description from Treatments join Professionals on Treatments.professional_id = Professionals.professional_id join Treatment_Types on Treatments.treatment_type_code = Treatment_Types.treatment_type_code
+select professionals.first_name , treatment_types.treatment_type_description from Treatments join Professionals on Treatments.professional_id = Professionals.professional_id join Treatment_Types on Treatments.treatment_type_code = Treatment_Types.treatment_type_code
+
+# ground-truth SQL
+SELECT count(*) FROM Dogs WHERE dog_id NOT IN ( SELECT dog_id FROM Treatments )
+select count(*) from dogs where dog_id not in ( select dog_id from treatments )
+SELECT count(*) FROM Owners WHERE owner_id NOT IN ( SELECT owner_id FROM Dogs )
+SELECT count(*) FROM Owners WHERE owner_id NOT IN ( SELECT owner_id FROM Dogs )
+SELECT count(*) FROM Professionals WHERE professional_id NOT IN ( SELECT professional_id FROM Treatments )
+SELECT count(*) FROM Professionals WHERE professional_id NOT IN ( SELECT professional_id FROM Treatments )
+SELECT name ,  age ,  weight FROM Dogs WHERE abandoned_yn  =  1
+SELECT name ,  age ,  weight FROM Dogs WHERE abandoned_yn  =  1
+SELECT avg(age) FROM Dogs
+SELECT avg(age) FROM Dogs
+SELECT max(age) FROM Dogs
+SELECT max(age) FROM Dogs
+SELECT charge_type ,  charge_amount FROM Charges
+SELECT charge_type ,  charge_amount FROM Charges
+SELECT max(charge_amount) FROM Charges
+SELECT max(charge_amount) FROM Charges
+SELECT email_address ,  cell_number ,  home_phone FROM professionals
+SELECT email_address ,  cell_number ,  home_phone FROM professionals
+SELECT DISTINCT breed_code ,  size_code FROM dogs
+SELECT DISTINCT breed_code ,  size_code FROM dogs
+SELECT DISTINCT T1.first_name ,  T3.treatment_type_description FROM professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id JOIN Treatment_types AS T3 ON T2.treatment_type_code  =  T3.treatment_type_code
+SELECT DISTINCT T1.first_name ,  T3.treatment_type_description FROM professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id JOIN Treatment_types AS T3 ON T2.treatment_type_code  =  T3.treatment_type_code

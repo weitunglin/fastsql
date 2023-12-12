@@ -4,9 +4,12 @@ import torch
 import argparse
 import torch.optim as optim
 import transformers
+from functools import partial
 
 from tqdm import tqdm
 from tokenizers import AddedToken
+from minlora import add_lora, apply_to_lora, disable_lora, enable_lora, get_lora_params, merge_lora, name_is_lora, remove_lora, load_multiple_lora, select_lora, get_lora_state_dict, LoRAParametrization
+
 
 from torch.utils.tensorboard import SummaryWriter
 from torch.utils.data import DataLoader
@@ -28,6 +31,8 @@ def parse_option():
                         help = 'the id of used GPU device.')
     parser.add_argument('--learning_rate',type = float, default = 3e-5,
                         help = 'learning rate.')
+    parser.add_argument('--lora_learning_rate',type = float, default = 3e-5,
+                        help = 'lora learning rate.')
     parser.add_argument('--epochs', type = int, default = 128,
                         help = 'training epochs.')
     parser.add_argument('--seed', type = int, default = 42,
@@ -45,6 +50,8 @@ def parse_option():
                             t5-large, https://huggingface.co/t5-large;
                             t5-3b, https://huggingface.co/t5-3b;
                         ''')
+    parser.add_argument('--use_lora', action='store_true',
+                        help = 'whether to use lora for fine-tuning.')
     parser.add_argument('--use_adafactor', action='store_true',
                         help = 'whether to use adafactor optimizer.')
     parser.add_argument('--mode', type = str, default = "train",
@@ -110,6 +117,15 @@ def _train(opt):
     # initialize model
     model = model_class.from_pretrained(opt.model_name_or_path)
     model.resize_token_embeddings(len(text2sql_tokenizer))
+
+    if opt.use_lora:
+        lora_config = {  # specify which layers to add lora to, by default only add to linear layers
+            torch.nn.Linear: {
+                "weight": partial(LoRAParametrization.from_linear, rank=256, lora_alpha=256, lora_dropout_p=0.05),
+            },
+        }
+        add_lora(model, lora_config)
+
     if torch.cuda.is_available():
         model = model.cuda()
     
@@ -121,23 +137,33 @@ def _train(opt):
     num_training_steps = int(opt.epochs*len(train_dataset)/opt.batch_size)
     # save checkpoint for each 1.42857 epochs (about 1.42857*7000=10000 examples for Spider's training set)
     num_checkpoint_steps = int(1.42857 * len(train_dataset)/opt.batch_size)
+    # num_checkpoint_steps = int(0.9 * len(train_dataset)/opt.batch_size)
 
-    if opt.use_adafactor:
-        print("Let's use Adafactor!")
-        optimizer = Adafactor(
-            model.parameters(), 
-            lr=opt.learning_rate, 
-            scale_parameter=False, 
-            relative_step=False, 
-            clip_threshold = 1.0,
-            warmup_init=False
-        )
+    if opt.use_lora:
+        num_checkpoint_steps = int(1.4285 * 5 * len(train_dataset)/opt.batch_size)
+
+    if opt.use_lora:
+        parameters = [
+            {"params": list(get_lora_params(model))},
+        ]
+        optimizer = torch.optim.AdamW(parameters, lr=opt.lora_learning_rate)
     else:
-        print("Let's use AdamW!")
-        optimizer = optim.AdamW(
-            model.parameters(), 
-            lr = opt.learning_rate
-        )
+        if opt.use_adafactor:
+            print("Let's use Adafactor!")
+            optimizer = Adafactor(
+                model.parameters(), 
+                lr=opt.learning_rate, 
+                scale_parameter=False, 
+                relative_step=False, 
+                clip_threshold = 1.0,
+                warmup_init=False
+            )
+        else:
+            print("Let's use AdamW!")
+            optimizer = optim.AdamW(
+                model.parameters(), 
+                lr = opt.learning_rate
+            )
 
     scheduler = transformers.get_cosine_schedule_with_warmup(
         optimizer, 
@@ -220,12 +246,18 @@ def _train(opt):
                 optimizer.step()
                 optimizer.zero_grad()
             
-            if train_step % num_checkpoint_steps == 0 and epoch >= 6:
+            if train_step % num_checkpoint_steps == 0 and epoch >= 10:
+            # if train_step % num_checkpoint_steps == 0:
                 print(f"At {train_step} training step, save a checkpoint.")
                 os.makedirs(opt.save_path, exist_ok = True)
-                model.save_pretrained(save_directory = opt.save_path + "/checkpoint-{}".format(train_step))
-                text2sql_tokenizer.save_pretrained(save_directory = opt.save_path + "/checkpoint-{}".format(train_step))
-    
+
+                if not opt.use_lora:
+                    model.save_pretrained(save_directory = opt.save_path + "/checkpoint-{}".format(train_step))
+                    text2sql_tokenizer.save_pretrained(save_directory = opt.save_path + "/checkpoint-{}".format(train_step))
+                else:
+                    lora_state_dict = get_lora_state_dict(model)
+                    torch.save(lora_state_dict, opt.save_path + "/checkpoint-{}.lora".format(train_step))
+
 def _test(opt):
     set_seed(opt.seed)
     print(opt)
@@ -266,7 +298,20 @@ def _test(opt):
     model_class = MT5ForConditionalGeneration if "mt5" in opt.save_path else T5ForConditionalGeneration
 
     # initialize model
+    print(opt.save_path)
+    print(opt.lora_save_path)
     model = model_class.from_pretrained(opt.save_path)
+    if opt.use_lora:
+        lora_config = {  # specify which layers to add lora to, by default only add to linear layers
+            torch.nn.Linear: {
+                "weight": partial(LoRAParametrization.from_linear, rank=256, lora_alpha=256, lora_dropout_p=0.05),
+            },
+        }
+        add_lora(model, lora_config)
+        lora_state_dict = torch.load(opt.lora_save_path)
+        # print(lora_state_dict)
+        _ = model.load_state_dict(lora_state_dict, strict=False)
+        merge_lora(model)
     if torch.cuda.is_available():
         model = model.cuda()
 

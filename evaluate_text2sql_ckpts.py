@@ -15,6 +15,8 @@ def parse_option():
                         help = 'random seed.')
     parser.add_argument('--save_path', type = str, default = "./models/text2sql",
                         help = 'save path of fine-tuned text2sql models.')
+    parser.add_argument('--lora_save_path', type = str, default = None,
+                        help = 'save path of fine-tuned text2sql lora models.')
     parser.add_argument('--eval_results_path', type = str, default = "./eval_results/text2sql",
                         help = 'the evaluation results of fine-tuned text2sql models.')
     parser.add_argument('--mode', type = str, default = "eval",
@@ -34,6 +36,7 @@ def parse_option():
     parser.add_argument("--target_type", type = str, default = "sql",
                 help = "sql or natsql.")
     parser.add_argument("--output", type = str, default = "predicted_sql.txt")
+    parser.add_argument("--use_lora", action="store_true")
     
     opt = parser.parse_args()
 
@@ -43,8 +46,17 @@ def parse_option():
 if __name__ == "__main__":
     opt = parse_option()
     
-    ckpt_names = os.listdir(opt.save_path)
-    # ckpt_names = sorted(ckpt_names, key = lambda x:eval(x.split("-")[1]))
+    if not opt.use_lora:
+        ckpt_names = os.listdir(opt.save_path)
+    else:
+        ckpt_names = os.listdir(opt.lora_save_path)
+    
+    if not opt.use_lora:
+        ckpt_names = sorted(ckpt_names, key = lambda x:eval(x.split("-")[1]))
+    else:
+        ckpt_names = sorted(ckpt_names, key = lambda x:eval(x.split("-")[1].split('.lora')[0]))
+
+    # ckpt_names = list(filter(lambda x:'.lora' not in x, ckpt_names))
     if 'custom' in opt.save_path:
         ckpt_names = list(filter(lambda x: '119952' in x, ckpt_names))
         # opt.save_path = opt.save_path.replace('-custom', '')
@@ -52,6 +64,7 @@ if __name__ == "__main__":
     print("ckpt_names:", ckpt_names)
 
     save_path = opt.save_path
+    lora_save_path = opt.lora_save_path
     os.makedirs(opt.eval_results_path, exist_ok = True)
 
     eval_results = []
@@ -59,9 +72,15 @@ if __name__ == "__main__":
         print("Start evaluating ckpt: {}".format(ckpt_name))
         
         opt.save_path = save_path + "/{}".format(ckpt_name)
+
+        if opt.use_lora:
+            opt.lora_save_path = lora_save_path + f'/{ckpt_name}'
+            opt.save_path = save_path
         em, exec = _test(opt)
         
         eval_result = dict()
+        if opt.use_lora:
+            eval_result["lora_ckpt"] = opt.lora_save_path
         eval_result["ckpt"] = opt.save_path
         eval_result["EM"] = em
         eval_result["EXEC"] = exec
@@ -72,6 +91,8 @@ if __name__ == "__main__":
         eval_results.append(eval_result)
     
     for eval_result in eval_results:
+        if opt.use_lora:
+            print("lora ckpt name:", eval_result["lora_ckpt"])
         print("ckpt name:", eval_result["ckpt"])
         print("EM:", eval_result["EM"])
         print("EXEC:", eval_result["EXEC"])

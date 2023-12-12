@@ -1,6 +1,144 @@
 [
     {
         "db_id": "dog_kennels",
+        "query": "SELECT name ,  age ,  weight FROM Dogs WHERE abandoned_yn  =  1",
+        "query_toks": [
+            "SELECT",
+            "name",
+            ",",
+            "age",
+            ",",
+            "weight",
+            "FROM",
+            "Dogs",
+            "WHERE",
+            "abandoned_yn",
+            "=",
+            "1"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "name",
+            ",",
+            "age",
+            ",",
+            "weight",
+            "from",
+            "dogs",
+            "where",
+            "abandoned_yn",
+            "=",
+            "value"
+        ],
+        "question": "List the dog name, age and weight of the dogs who have been abandoned? 1 stands for yes, and 0 stands for no.",
+        "question_toks": [
+            "List",
+            "the",
+            "dog",
+            "name",
+            ",",
+            "age",
+            "and",
+            "weight",
+            "of",
+            "the",
+            "dogs",
+            "who",
+            "have",
+            "been",
+            "abandoned",
+            "?",
+            "1",
+            "stands",
+            "for",
+            "yes",
+            ",",
+            "and",
+            "0",
+            "stands",
+            "for",
+            "no",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                25,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                26,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                29,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            22,
+                            false
+                        ],
+                        null
+                    ],
+                    1.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "dog_kennels",
         "query": "SELECT state FROM Owners INTERSECT SELECT state FROM Professionals",
         "query_toks": [
             "SELECT",
