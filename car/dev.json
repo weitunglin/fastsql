@@ -1,0 +1,5694 @@
+[
+    {
+        "db_id": "car_1",
+        "query": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;",
+        "query_toks": [
+            "SELECT",
+            "DISTINCT",
+            "T2.Model",
+            "FROM",
+            "CAR_NAMES",
+            "AS",
+            "T1",
+            "JOIN",
+            "MODEL_LIST",
+            "AS",
+            "T2",
+            "ON",
+            "T1.Model",
+            "=",
+            "T2.Model",
+            "JOIN",
+            "CAR_MAKERS",
+            "AS",
+            "T3",
+            "ON",
+            "T2.Maker",
+            "=",
+            "T3.Id",
+            "JOIN",
+            "CARS_DATA",
+            "AS",
+            "T4",
+            "ON",
+            "T1.MakeId",
+            "=",
+            "T4.Id",
+            "WHERE",
+            "T3.FullName",
+            "=",
+            "'General",
+            "Motors",
+            "'",
+            "OR",
+            "T4.weight",
+            ">",
+            "3500",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "distinct",
+            "t2",
+            ".",
+            "model",
+            "from",
+            "car_names",
+            "as",
+            "t1",
+            "join",
+            "model_list",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "model",
+            "=",
+            "t2",
+            ".",
+            "model",
+            "join",
+            "car_makers",
+            "as",
+            "t3",
+            "on",
+            "t2",
+            ".",
+            "maker",
+            "=",
+            "t3",
+            ".",
+            "id",
+            "join",
+            "cars_data",
+            "as",
+            "t4",
+            "on",
+            "t1",
+            ".",
+            "makeid",
+            "=",
+            "t4",
+            ".",
+            "id",
+            "where",
+            "t3",
+            ".",
+            "fullname",
+            "=",
+            "value",
+            "or",
+            "t4",
+            ".",
+            "weight",
+            ">",
+            "value"
+        ],
+        "question": "Which distinctive models are produced by maker with the full name General Motors or weighing more than 3500?",
+        "question_toks": [
+            "Which",
+            "distinctive",
+            "models",
+            "are",
+            "produced",
+            "by",
+            "maker",
+            "with",
+            "the",
+            "full",
+            "name",
+            "General",
+            "Motors",
+            "or",
+            "weighing",
+            "more",
+            "than",
+            "3500",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        4
+                    ],
+                    [
+                        "table_unit",
+                        3
+                    ],
+                    [
+                        "table_unit",
+                        2
+                    ],
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                14,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            12,
+                            false
+                        ],
+                        null
+                    ],
+                    "and",
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                11,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            6,
+                            false
+                        ],
+                        null
+                    ],
+                    "and",
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                13,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            16,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                12,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"General Motors\"",
+                    null
+                ],
+                "or",
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            21,
+                            false
+                        ],
+                        null
+                    ],
+                    3500.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;",
+        "query_toks": [
+            "SELECT",
+            "DISTINCT",
+            "T2.Model",
+            "FROM",
+            "CAR_NAMES",
+            "AS",
+            "T1",
+            "JOIN",
+            "MODEL_LIST",
+            "AS",
+            "T2",
+            "ON",
+            "T1.Model",
+            "=",
+            "T2.Model",
+            "JOIN",
+            "CAR_MAKERS",
+            "AS",
+            "T3",
+            "ON",
+            "T2.Maker",
+            "=",
+            "T3.Id",
+            "JOIN",
+            "CARS_DATA",
+            "AS",
+            "T4",
+            "ON",
+            "T1.MakeId",
+            "=",
+            "T4.Id",
+            "WHERE",
+            "T3.FullName",
+            "=",
+            "'General",
+            "Motors",
+            "'",
+            "OR",
+            "T4.weight",
+            ">",
+            "3500",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "distinct",
+            "t2",
+            ".",
+            "model",
+            "from",
+            "car_names",
+            "as",
+            "t1",
+            "join",
+            "model_list",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "model",
+            "=",
+            "t2",
+            ".",
+            "model",
+            "join",
+            "car_makers",
+            "as",
+            "t3",
+            "on",
+            "t2",
+            ".",
+            "maker",
+            "=",
+            "t3",
+            ".",
+            "id",
+            "join",
+            "cars_data",
+            "as",
+            "t4",
+            "on",
+            "t1",
+            ".",
+            "makeid",
+            "=",
+            "t4",
+            ".",
+            "id",
+            "where",
+            "t3",
+            ".",
+            "fullname",
+            "=",
+            "value",
+            "or",
+            "t4",
+            ".",
+            "weight",
+            ">",
+            "value"
+        ],
+        "question": "What are the different models created by either the car maker General Motors or weighed more than 3500?",
+        "question_toks": [
+            "What",
+            "are",
+            "the",
+            "different",
+            "models",
+            "created",
+            "by",
+            "either",
+            "the",
+            "car",
+            "maker",
+            "General",
+            "Motors",
+            "or",
+            "weighed",
+            "more",
+            "than",
+            "3500",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        4
+                    ],
+                    [
+                        "table_unit",
+                        3
+                    ],
+                    [
+                        "table_unit",
+                        2
+                    ],
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                14,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            12,
+                            false
+                        ],
+                        null
+                    ],
+                    "and",
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                11,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            6,
+                            false
+                        ],
+                        null
+                    ],
+                    "and",
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                13,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            16,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                12,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"General Motors\"",
+                    null
+                ],
+                "or",
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            21,
+                            false
+                        ],
+                        null
+                    ],
+                    3500.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "select distinct year from cars_data where weight between 3000 and 4000;",
+        "query_toks": [
+            "select",
+            "distinct",
+            "year",
+            "from",
+            "cars_data",
+            "where",
+            "weight",
+            "between",
+            "3000",
+            "and",
+            "4000",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "distinct",
+            "year",
+            "from",
+            "cars_data",
+            "where",
+            "weight",
+            "between",
+            "value",
+            "and",
+            "value"
+        ],
+        "question": "In which years cars were produced weighing no less than 3000 and no more than 4000 ?",
+        "question_toks": [
+            "In",
+            "which",
+            "years",
+            "cars",
+            "were",
+            "produced",
+            "weighing",
+            "no",
+            "less",
+            "than",
+            "3000",
+            "and",
+            "no",
+            "more",
+            "than",
+            "4000",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                23,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    1,
+                    [
+                        0,
+                        [
+                            0,
+                            21,
+                            false
+                        ],
+                        null
+                    ],
+                    3000.0,
+                    4000.0
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "select distinct year from cars_data where weight between 3000 and 4000;",
+        "query_toks": [
+            "select",
+            "distinct",
+            "year",
+            "from",
+            "cars_data",
+            "where",
+            "weight",
+            "between",
+            "3000",
+            "and",
+            "4000",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "distinct",
+            "year",
+            "from",
+            "cars_data",
+            "where",
+            "weight",
+            "between",
+            "value",
+            "and",
+            "value"
+        ],
+        "question": "What are the different years in which there were cars produced that weighed less than 4000 and also cars that weighted more than 3000 ?",
+        "question_toks": [
+            "What",
+            "are",
+            "the",
+            "different",
+            "years",
+            "in",
+            "which",
+            "there",
+            "were",
+            "cars",
+            "produced",
+            "that",
+            "weighed",
+            "less",
+            "than",
+            "4000",
+            "and",
+            "also",
+            "cars",
+            "that",
+            "weighted",
+            "more",
+            "than",
+            "3000",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                23,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    1,
+                    [
+                        0,
+                        [
+                            0,
+                            21,
+                            false
+                        ],
+                        null
+                    ],
+                    3000.0,
+                    4000.0
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1;",
+        "query_toks": [
+            "SELECT",
+            "T1.horsepower",
+            "FROM",
+            "CARS_DATA",
+            "AS",
+            "T1",
+            "ORDER",
+            "BY",
+            "T1.accelerate",
+            "DESC",
+            "LIMIT",
+            "1",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t1",
+            ".",
+            "horsepower",
+            "from",
+            "cars_data",
+            "as",
+            "t1",
+            "order",
+            "by",
+            "t1",
+            ".",
+            "accelerate",
+            "desc",
+            "limit",
+            "value"
+        ],
+        "question": "What is the horsepower of the car with the largest accelerate?",
+        "question_toks": [
+            "What",
+            "is",
+            "the",
+            "horsepower",
+            "of",
+            "the",
+            "car",
+            "with",
+            "the",
+            "largest",
+            "accelerate",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                20,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+                "desc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            22,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "limit": 1,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1;",
+        "query_toks": [
+            "SELECT",
+            "T1.horsepower",
+            "FROM",
+            "CARS_DATA",
+            "AS",
+            "T1",
+            "ORDER",
+            "BY",
+            "T1.accelerate",
+            "DESC",
+            "LIMIT",
+            "1",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t1",
+            ".",
+            "horsepower",
+            "from",
+            "cars_data",
+            "as",
+            "t1",
+            "order",
+            "by",
+            "t1",
+            ".",
+            "accelerate",
+            "desc",
+            "limit",
+            "value"
+        ],
+        "question": "What is the horsepower of the car with the greatest accelerate?",
+        "question_toks": [
+            "What",
+            "is",
+            "the",
+            "horsepower",
+            "of",
+            "the",
+            "car",
+            "with",
+            "the",
+            "greatest",
+            "accelerate",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                20,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+                "desc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            22,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "limit": 1,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  'volvo' ORDER BY T1.accelerate ASC LIMIT 1;",
+        "query_toks": [
+            "SELECT",
+            "T1.cylinders",
+            "FROM",
+            "CARS_DATA",
+            "AS",
+            "T1",
+            "JOIN",
+            "CAR_NAMES",
+            "AS",
+            "T2",
+            "ON",
+            "T1.Id",
+            "=",
+            "T2.MakeId",
+            "WHERE",
+            "T2.Model",
+            "=",
+            "'volvo",
+            "'",
+            "ORDER",
+            "BY",
+            "T1.accelerate",
+            "ASC",
+            "LIMIT",
+            "1",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t1",
+            ".",
+            "cylinders",
+            "from",
+            "cars_data",
+            "as",
+            "t1",
+            "join",
+            "car_names",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "id",
+            "=",
+            "t2",
+            ".",
+            "makeid",
+            "where",
+            "t2",
+            ".",
+            "model",
+            "=",
+            "value",
+            "order",
+            "by",
+            "t1",
+            ".",
+            "accelerate",
+            "asc",
+            "limit",
+            "value"
+        ],
+        "question": "For model volvo, how many cylinders does the car with the least accelerate have?",
+        "question_toks": [
+            "For",
+            "model",
+            "volvo",
+            ",",
+            "how",
+            "many",
+            "cylinders",
+            "does",
+            "the",
+            "car",
+            "with",
+            "the",
+            "least",
+            "accelerate",
+            "have",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ],
+                    [
+                        "table_unit",
+                        4
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                16,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            13,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                18,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            14,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"volvo\"",
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+                "asc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            22,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "limit": 1,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  'volvo' ORDER BY T1.accelerate ASC LIMIT 1;",
+        "query_toks": [
+            "SELECT",
+            "T1.cylinders",
+            "FROM",
+            "CARS_DATA",
+            "AS",
+            "T1",
+            "JOIN",
+            "CAR_NAMES",
+            "AS",
+            "T2",
+            "ON",
+            "T1.Id",
+            "=",
+            "T2.MakeId",
+            "WHERE",
+            "T2.Model",
+            "=",
+            "'volvo",
+            "'",
+            "ORDER",
+            "BY",
+            "T1.accelerate",
+            "ASC",
+            "LIMIT",
+            "1",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t1",
+            ".",
+            "cylinders",
+            "from",
+            "cars_data",
+            "as",
+            "t1",
+            "join",
+            "car_names",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "id",
+            "=",
+            "t2",
+            ".",
+            "makeid",
+            "where",
+            "t2",
+            ".",
+            "model",
+            "=",
+            "value",
+            "order",
+            "by",
+            "t1",
+            ".",
+            "accelerate",
+            "asc",
+            "limit",
+            "value"
+        ],
+        "question": "For a volvo model, how many cylinders does the version with least accelerate have?",
+        "question_toks": [
+            "For",
+            "a",
+            "volvo",
+            "model",
+            ",",
+            "how",
+            "many",
+            "cylinders",
+            "does",
+            "the",
+            "version",
+            "with",
+            "least",
+            "accelerate",
+            "have",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ],
+                    [
+                        "table_unit",
+                        4
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                16,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            13,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                18,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            14,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"volvo\"",
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+                "asc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            22,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "limit": 1,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT COUNT(*) FROM CARS_DATA WHERE Accelerate  >  ( SELECT Accelerate FROM CARS_DATA ORDER BY Horsepower DESC LIMIT 1 );",
+        "query_toks": [
+            "SELECT",
+            "COUNT",
+            "(",
+            "*",
+            ")",
+            "FROM",
+            "CARS_DATA",
+            "WHERE",
+            "Accelerate",
+            ">",
+            "(",
+            "SELECT",
+            "Accelerate",
+            "FROM",
+            "CARS_DATA",
+            "ORDER",
+            "BY",
+            "Horsepower",
+            "DESC",
+            "LIMIT",
+            "1",
+            ")",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "cars_data",
+            "where",
+            "accelerate",
+            ">",
+            "(",
+            "select",
+            "accelerate",
+            "from",
+            "cars_data",
+            "order",
+            "by",
+            "horsepower",
+            "desc",
+            "limit",
+            "value",
+            ")"
+        ],
+        "question": "How many cars have a larger accelerate than the car with the largest horsepower?",
+        "question_toks": [
+            "How",
+            "many",
+            "cars",
+            "have",
+            "a",
+            "larger",
+            "accelerate",
+            "than",
+            "the",
+            "car",
+            "with",
+            "the",
+            "largest",
+            "horsepower",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            22,
+                            false
+                        ],
+                        null
+                    ],
+                    {
+                        "from": {
+                            "table_units": [
+                                [
+                                    "table_unit",
+                                    5
+                                ]
+                            ],
+                            "conds": []
+                        },
+                        "select": [
+                            false,
+                            [
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        [
+                                            0,
+                                            22,
+                                            false
+                                        ],
+                                        null
+                                    ]
+                                ]
+                            ]
+                        ],
+                        "where": [],
+                        "groupBy": [],
+                        "having": [],
+                        "orderBy": [
+                            "desc",
+                            [
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        20,
+                                        false
+                                    ],
+                                    null
+                                ]
+                            ]
+                        ],
+                        "limit": 1,
+                        "intersect": null,
+                        "union": null,
+                        "except": null
+                    },
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT COUNT(*) FROM CARS_DATA WHERE Accelerate  >  ( SELECT Accelerate FROM CARS_DATA ORDER BY Horsepower DESC LIMIT 1 );",
+        "query_toks": [
+            "SELECT",
+            "COUNT",
+            "(",
+            "*",
+            ")",
+            "FROM",
+            "CARS_DATA",
+            "WHERE",
+            "Accelerate",
+            ">",
+            "(",
+            "SELECT",
+            "Accelerate",
+            "FROM",
+            "CARS_DATA",
+            "ORDER",
+            "BY",
+            "Horsepower",
+            "DESC",
+            "LIMIT",
+            "1",
+            ")",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "cars_data",
+            "where",
+            "accelerate",
+            ">",
+            "(",
+            "select",
+            "accelerate",
+            "from",
+            "cars_data",
+            "order",
+            "by",
+            "horsepower",
+            "desc",
+            "limit",
+            "value",
+            ")"
+        ],
+        "question": "What is the number of cars with a greater accelerate than the one with the most horsepower?",
+        "question_toks": [
+            "What",
+            "is",
+            "the",
+            "number",
+            "of",
+            "cars",
+            "with",
+            "a",
+            "greater",
+            "accelerate",
+            "than",
+            "the",
+            "one",
+            "with",
+            "the",
+            "most",
+            "horsepower",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            22,
+                            false
+                        ],
+                        null
+                    ],
+                    {
+                        "from": {
+                            "table_units": [
+                                [
+                                    "table_unit",
+                                    5
+                                ]
+                            ],
+                            "conds": []
+                        },
+                        "select": [
+                            false,
+                            [
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        [
+                                            0,
+                                            22,
+                                            false
+                                        ],
+                                        null
+                                    ]
+                                ]
+                            ]
+                        ],
+                        "where": [],
+                        "groupBy": [],
+                        "having": [],
+                        "orderBy": [
+                            "desc",
+                            [
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        20,
+                                        false
+                                    ],
+                                    null
+                                ]
+                            ]
+                        ],
+                        "limit": 1,
+                        "intersect": null,
+                        "union": null,
+                        "except": null
+                    },
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1.countryid",
+            "=",
+            "t2.country",
+            "group",
+            "by",
+            "t1.countryid",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "2"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "countryid",
+            "=",
+            "t2",
+            ".",
+            "country",
+            "group",
+            "by",
+            "t1",
+            ".",
+            "countryid",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "value"
+        ],
+        "question": "How many countries has more than 2 car makers ?",
+        "question_toks": [
+            "How",
+            "many",
+            "countries",
+            "has",
+            "more",
+            "than",
+            "2",
+            "car",
+            "makers",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        1
+                    ],
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                3,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            9,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [
+                [
+                    0,
+                    3,
+                    false
+                ]
+            ],
+            "having": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            3,
+                            0,
+                            false
+                        ],
+                        null
+                    ],
+                    2.0,
+                    null
+                ]
+            ],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1.countryid",
+            "=",
+            "t2.country",
+            "group",
+            "by",
+            "t1.countryid",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "2"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "countryid",
+            "=",
+            "t2",
+            ".",
+            "country",
+            "group",
+            "by",
+            "t1",
+            ".",
+            "countryid",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "value"
+        ],
+        "question": "What is the number of countries with more than 2 car makers ?",
+        "question_toks": [
+            "What",
+            "is",
+            "the",
+            "number",
+            "of",
+            "countries",
+            "with",
+            "more",
+            "than",
+            "2",
+            "car",
+            "makers",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        1
+                    ],
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                3,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            9,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [
+                [
+                    0,
+                    3,
+                    false
+                ]
+            ],
+            "having": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            3,
+                            0,
+                            false
+                        ],
+                        null
+                    ],
+                    2.0,
+                    null
+                ]
+            ],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT COUNT(*) FROM CARS_DATA WHERE Cylinders  >  6;",
+        "query_toks": [
+            "SELECT",
+            "COUNT",
+            "(",
+            "*",
+            ")",
+            "FROM",
+            "CARS_DATA",
+            "WHERE",
+            "Cylinders",
+            ">",
+            "6",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "cars_data",
+            "where",
+            "cylinders",
+            ">",
+            "value"
+        ],
+        "question": "How many cars has over 6 cylinders?",
+        "question_toks": [
+            "How",
+            "many",
+            "cars",
+            "has",
+            "over",
+            "6",
+            "cylinders",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            18,
+                            false
+                        ],
+                        null
+                    ],
+                    6.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT COUNT(*) FROM CARS_DATA WHERE Cylinders  >  6;",
+        "query_toks": [
+            "SELECT",
+            "COUNT",
+            "(",
+            "*",
+            ")",
+            "FROM",
+            "CARS_DATA",
+            "WHERE",
+            "Cylinders",
+            ">",
+            "6",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "cars_data",
+            "where",
+            "cylinders",
+            ">",
+            "value"
+        ],
+        "question": "What is the number of carsw ith over 6 cylinders?",
+        "question_toks": [
+            "What",
+            "is",
+            "the",
+            "number",
+            "of",
+            "carsw",
+            "ith",
+            "over",
+            "6",
+            "cylinders",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            18,
+                            false
+                        ],
+                        null
+                    ],
+                    6.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Cylinders  =  4 ORDER BY T2.horsepower DESC LIMIT 1;",
+        "query_toks": [
+            "SELECT",
+            "T1.Model",
+            "FROM",
+            "CAR_NAMES",
+            "AS",
+            "T1",
+            "JOIN",
+            "CARS_DATA",
+            "AS",
+            "T2",
+            "ON",
+            "T1.MakeId",
+            "=",
+            "T2.Id",
+            "WHERE",
+            "T2.Cylinders",
+            "=",
+            "4",
+            "ORDER",
+            "BY",
+            "T2.horsepower",
+            "DESC",
+            "LIMIT",
+            "1",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t1",
+            ".",
+            "model",
+            "from",
+            "car_names",
+            "as",
+            "t1",
+            "join",
+            "cars_data",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "makeid",
+            "=",
+            "t2",
+            ".",
+            "id",
+            "where",
+            "t2",
+            ".",
+            "cylinders",
+            "=",
+            "value",
+            "order",
+            "by",
+            "t2",
+            ".",
+            "horsepower",
+            "desc",
+            "limit",
+            "value"
+        ],
+        "question": "For the cars with 4 cylinders, which model has the largest horsepower?",
+        "question_toks": [
+            "For",
+            "the",
+            "cars",
+            "with",
+            "4",
+            "cylinders",
+            ",",
+            "which",
+            "model",
+            "has",
+            "the",
+            "largest",
+            "horsepower",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        4
+                    ],
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                13,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            16,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                14,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            18,
+                            false
+                        ],
+                        null
+                    ],
+                    4.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+                "desc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            20,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "limit": 1,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Cylinders  =  4 ORDER BY T2.horsepower DESC LIMIT 1;",
+        "query_toks": [
+            "SELECT",
+            "T1.Model",
+            "FROM",
+            "CAR_NAMES",
+            "AS",
+            "T1",
+            "JOIN",
+            "CARS_DATA",
+            "AS",
+            "T2",
+            "ON",
+            "T1.MakeId",
+            "=",
+            "T2.Id",
+            "WHERE",
+            "T2.Cylinders",
+            "=",
+            "4",
+            "ORDER",
+            "BY",
+            "T2.horsepower",
+            "DESC",
+            "LIMIT",
+            "1",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t1",
+            ".",
+            "model",
+            "from",
+            "car_names",
+            "as",
+            "t1",
+            "join",
+            "cars_data",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "makeid",
+            "=",
+            "t2",
+            ".",
+            "id",
+            "where",
+            "t2",
+            ".",
+            "cylinders",
+            "=",
+            "value",
+            "order",
+            "by",
+            "t2",
+            ".",
+            "horsepower",
+            "desc",
+            "limit",
+            "value"
+        ],
+        "question": "For all of the 4 cylinder cars, which model has the most horsepower?",
+        "question_toks": [
+            "For",
+            "all",
+            "of",
+            "the",
+            "4",
+            "cylinder",
+            "cars",
+            ",",
+            "which",
+            "model",
+            "has",
+            "the",
+            "most",
+            "horsepower",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        4
+                    ],
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                13,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            16,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                14,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            18,
+                            false
+                        ],
+                        null
+                    ],
+                    4.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+                "desc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            20,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "limit": 1,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT T2.MakeId ,  T2.Make FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T1.Horsepower  >  (SELECT min(Horsepower) FROM CARS_DATA) AND T1.Cylinders  <=  3;",
+        "query_toks": [
+            "SELECT",
+            "T2.MakeId",
+            ",",
+            "T2.Make",
+            "FROM",
+            "CARS_DATA",
+            "AS",
+            "T1",
+            "JOIN",
+            "CAR_NAMES",
+            "AS",
+            "T2",
+            "ON",
+            "T1.Id",
+            "=",
+            "T2.MakeId",
+            "WHERE",
+            "T1.Horsepower",
+            ">",
+            "(",
+            "SELECT",
+            "min",
+            "(",
+            "Horsepower",
+            ")",
+            "FROM",
+            "CARS_DATA",
+            ")",
+            "AND",
+            "T1.Cylinders",
+            "<",
+            "=",
+            "3",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t2",
+            ".",
+            "makeid",
+            ",",
+            "t2",
+            ".",
+            "make",
+            "from",
+            "cars_data",
+            "as",
+            "t1",
+            "join",
+            "car_names",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "id",
+            "=",
+            "t2",
+            ".",
+            "makeid",
+            "where",
+            "t1",
+            ".",
+            "horsepower",
+            ">",
+            "(",
+            "select",
+            "min",
+            "(",
+            "horsepower",
+            ")",
+            "from",
+            "cars_data",
+            ")",
+            "and",
+            "t1",
+            ".",
+            "cylinders",
+            "<",
+            "=",
+            "value"
+        ],
+        "question": "Among the cars with more than lowest horsepower, which ones do not have more than 3 cylinders? List the car makeid and make name.",
+        "question_toks": [
+            "Among",
+            "the",
+            "cars",
+            "with",
+            "more",
+            "than",
+            "lowest",
+            "horsepower",
+            ",",
+            "which",
+            "ones",
+            "do",
+            "not",
+            "have",
+            "more",
+            "than",
+            "3",
+            "cylinders",
+            "?",
+            "List",
+            "the",
+            "car",
+            "makeid",
+            "and",
+            "make",
+            "name",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ],
+                    [
+                        "table_unit",
+                        4
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                16,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            13,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                13,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                15,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            20,
+                            false
+                        ],
+                        null
+                    ],
+                    {
+                        "from": {
+                            "table_units": [
+                                [
+                                    "table_unit",
+                                    5
+                                ]
+                            ],
+                            "conds": []
+                        },
+                        "select": [
+                            false,
+                            [
+                                [
+                                    2,
+                                    [
+                                        0,
+                                        [
+                                            0,
+                                            20,
+                                            false
+                                        ],
+                                        null
+                                    ]
+                                ]
+                            ]
+                        ],
+                        "where": [],
+                        "groupBy": [],
+                        "having": [],
+                        "orderBy": [],
+                        "limit": null,
+                        "intersect": null,
+                        "union": null,
+                        "except": null
+                    },
+                    null
+                ],
+                "and",
+                [
+                    false,
+                    6,
+                    [
+                        0,
+                        [
+                            0,
+                            18,
+                            false
+                        ],
+                        null
+                    ],
+                    3.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "select t2.makeid ,  t2.make from cars_data as t1 join car_names as t2 on t1.id  =  t2.makeid where t1.horsepower  >  (select min(horsepower) from cars_data) and t1.cylinders  <  4;",
+        "query_toks": [
+            "select",
+            "t2.makeid",
+            ",",
+            "t2.make",
+            "from",
+            "cars_data",
+            "as",
+            "t1",
+            "join",
+            "car_names",
+            "as",
+            "t2",
+            "on",
+            "t1.id",
+            "=",
+            "t2.makeid",
+            "where",
+            "t1.horsepower",
+            ">",
+            "(",
+            "select",
+            "min",
+            "(",
+            "horsepower",
+            ")",
+            "from",
+            "cars_data",
+            ")",
+            "and",
+            "t1.cylinders",
+            "<",
+            "4",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t2",
+            ".",
+            "makeid",
+            ",",
+            "t2",
+            ".",
+            "make",
+            "from",
+            "cars_data",
+            "as",
+            "t1",
+            "join",
+            "car_names",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "id",
+            "=",
+            "t2",
+            ".",
+            "makeid",
+            "where",
+            "t1",
+            ".",
+            "horsepower",
+            ">",
+            "(",
+            "select",
+            "min",
+            "(",
+            "horsepower",
+            ")",
+            "from",
+            "cars_data",
+            ")",
+            "and",
+            "t1",
+            ".",
+            "cylinders",
+            "<",
+            "value"
+        ],
+        "question": "Among the cars that do not have the minimum horsepower , what are the make ids and names of all those with less than 4 cylinders ?",
+        "question_toks": [
+            "Among",
+            "the",
+            "cars",
+            "that",
+            "do",
+            "not",
+            "have",
+            "the",
+            "minimum",
+            "horsepower",
+            ",",
+            "what",
+            "are",
+            "the",
+            "make",
+            "ids",
+            "and",
+            "names",
+            "of",
+            "all",
+            "those",
+            "with",
+            "less",
+            "than",
+            "4",
+            "cylinders",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ],
+                    [
+                        "table_unit",
+                        4
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                16,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            13,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                13,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                15,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            20,
+                            false
+                        ],
+                        null
+                    ],
+                    {
+                        "from": {
+                            "table_units": [
+                                [
+                                    "table_unit",
+                                    5
+                                ]
+                            ],
+                            "conds": []
+                        },
+                        "select": [
+                            false,
+                            [
+                                [
+                                    2,
+                                    [
+                                        0,
+                                        [
+                                            0,
+                                            20,
+                                            false
+                                        ],
+                                        null
+                                    ]
+                                ]
+                            ]
+                        ],
+                        "where": [],
+                        "groupBy": [],
+                        "having": [],
+                        "orderBy": [],
+                        "limit": null,
+                        "intersect": null,
+                        "union": null,
+                        "except": null
+                    },
+                    null
+                ],
+                "and",
+                [
+                    false,
+                    4,
+                    [
+                        0,
+                        [
+                            0,
+                            18,
+                            false
+                        ],
+                        null
+                    ],
+                    4.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "select max(mpg) from cars_data where cylinders  =  8 or year  <  1980",
+        "query_toks": [
+            "select",
+            "max",
+            "(",
+            "mpg",
+            ")",
+            "from",
+            "cars_data",
+            "where",
+            "cylinders",
+            "=",
+            "8",
+            "or",
+            "year",
+            "<",
+            "1980"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "max",
+            "(",
+            "mpg",
+            ")",
+            "from",
+            "cars_data",
+            "where",
+            "cylinders",
+            "=",
+            "value",
+            "or",
+            "year",
+            "<",
+            "value"
+        ],
+        "question": "What is the maximum miles per gallon of the car with 8 cylinders or produced before 1980 ?",
+        "question_toks": [
+            "What",
+            "is",
+            "the",
+            "maximum",
+            "miles",
+            "per",
+            "gallon",
+            "of",
+            "the",
+            "car",
+            "with",
+            "8",
+            "cylinders",
+            "or",
+            "produced",
+            "before",
+            "1980",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        1,
+                        [
+                            0,
+                            [
+                                0,
+                                17,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            18,
+                            false
+                        ],
+                        null
+                    ],
+                    8.0,
+                    null
+                ],
+                "or",
+                [
+                    false,
+                    4,
+                    [
+                        0,
+                        [
+                            0,
+                            23,
+                            false
+                        ],
+                        null
+                    ],
+                    1980.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "select max(mpg) from cars_data where cylinders  =  8 or year  <  1980",
+        "query_toks": [
+            "select",
+            "max",
+            "(",
+            "mpg",
+            ")",
+            "from",
+            "cars_data",
+            "where",
+            "cylinders",
+            "=",
+            "8",
+            "or",
+            "year",
+            "<",
+            "1980"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "max",
+            "(",
+            "mpg",
+            ")",
+            "from",
+            "cars_data",
+            "where",
+            "cylinders",
+            "=",
+            "value",
+            "or",
+            "year",
+            "<",
+            "value"
+        ],
+        "question": "What is the maximum mpg of the cars that had 8 cylinders or that were produced before 1980 ?",
+        "question_toks": [
+            "What",
+            "is",
+            "the",
+            "maximum",
+            "mpg",
+            "of",
+            "the",
+            "cars",
+            "that",
+            "had",
+            "8",
+            "cylinders",
+            "or",
+            "that",
+            "were",
+            "produced",
+            "before",
+            "1980",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        5
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        1,
+                        [
+                            0,
+                            [
+                                0,
+                                17,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            18,
+                            false
+                        ],
+                        null
+                    ],
+                    8.0,
+                    null
+                ],
+                "or",
+                [
+                    false,
+                    4,
+                    [
+                        0,
+                        [
+                            0,
+                            23,
+                            false
+                        ],
+                        null
+                    ],
+                    1980.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != 'Ford Motor Company';",
+        "query_toks": [
+            "SELECT",
+            "DISTINCT",
+            "T1.model",
+            "FROM",
+            "MODEL_LIST",
+            "AS",
+            "T1",
+            "JOIN",
+            "CAR_NAMES",
+            "AS",
+            "T2",
+            "ON",
+            "T1.Model",
+            "=",
+            "T2.Model",
+            "JOIN",
+            "CARS_DATA",
+            "AS",
+            "T3",
+            "ON",
+            "T2.MakeId",
+            "=",
+            "T3.Id",
+            "JOIN",
+            "CAR_MAKERS",
+            "AS",
+            "T4",
+            "ON",
+            "T1.Maker",
+            "=",
+            "T4.Id",
+            "WHERE",
+            "T3.weight",
+            "<",
+            "3500",
+            "AND",
+            "T4.FullName",
+            "!",
+            "=",
+            "'Ford",
+            "Motor",
+            "Company",
+            "'",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "distinct",
+            "t1",
+            ".",
+            "model",
+            "from",
+            "model_list",
+            "as",
+            "t1",
+            "join",
+            "car_names",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "model",
+            "=",
+            "t2",
+            ".",
+            "model",
+            "join",
+            "cars_data",
+            "as",
+            "t3",
+            "on",
+            "t2",
+            ".",
+            "makeid",
+            "=",
+            "t3",
+            ".",
+            "id",
+            "join",
+            "car_makers",
+            "as",
+            "t4",
+            "on",
+            "t1",
+            ".",
+            "maker",
+            "=",
+            "t4",
+            ".",
+            "id",
+            "where",
+            "t3",
+            ".",
+            "weight",
+            "<",
+            "value",
+            "and",
+            "t4",
+            ".",
+            "fullname",
+            "!",
+            "=",
+            "value"
+        ],
+        "question": "Which models are lighter than 3500 but not built by the 'Ford Motor Company'?",
+        "question_toks": [
+            "Which",
+            "models",
+            "are",
+            "lighter",
+            "than",
+            "3500",
+            "but",
+            "not",
+            "built",
+            "by",
+            "the",
+            "'Ford",
+            "Motor",
+            "Company",
+            "'",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        3
+                    ],
+                    [
+                        "table_unit",
+                        4
+                    ],
+                    [
+                        "table_unit",
+                        5
+                    ],
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                12,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            14,
+                            false
+                        ],
+                        null
+                    ],
+                    "and",
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                13,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            16,
+                            false
+                        ],
+                        null
+                    ],
+                    "and",
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                11,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            6,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                12,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    4,
+                    [
+                        0,
+                        [
+                            0,
+                            21,
+                            false
+                        ],
+                        null
+                    ],
+                    3500.0,
+                    null
+                ],
+                "and",
+                [
+                    false,
+                    7,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Ford Motor Company\"",
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != 'Ford Motor Company';",
+        "query_toks": [
+            "SELECT",
+            "DISTINCT",
+            "T1.model",
+            "FROM",
+            "MODEL_LIST",
+            "AS",
+            "T1",
+            "JOIN",
+            "CAR_NAMES",
+            "AS",
+            "T2",
+            "ON",
+            "T1.Model",
+            "=",
+            "T2.Model",
+            "JOIN",
+            "CARS_DATA",
+            "AS",
+            "T3",
+            "ON",
+            "T2.MakeId",
+            "=",
+            "T3.Id",
+            "JOIN",
+            "CAR_MAKERS",
+            "AS",
+            "T4",
+            "ON",
+            "T1.Maker",
+            "=",
+            "T4.Id",
+            "WHERE",
+            "T3.weight",
+            "<",
+            "3500",
+            "AND",
+            "T4.FullName",
+            "!",
+            "=",
+            "'Ford",
+            "Motor",
+            "Company",
+            "'",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "distinct",
+            "t1",
+            ".",
+            "model",
+            "from",
+            "model_list",
+            "as",
+            "t1",
+            "join",
+            "car_names",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "model",
+            "=",
+            "t2",
+            ".",
+            "model",
+            "join",
+            "cars_data",
+            "as",
+            "t3",
+            "on",
+            "t2",
+            ".",
+            "makeid",
+            "=",
+            "t3",
+            ".",
+            "id",
+            "join",
+            "car_makers",
+            "as",
+            "t4",
+            "on",
+            "t1",
+            ".",
+            "maker",
+            "=",
+            "t4",
+            ".",
+            "id",
+            "where",
+            "t3",
+            ".",
+            "weight",
+            "<",
+            "value",
+            "and",
+            "t4",
+            ".",
+            "fullname",
+            "!",
+            "=",
+            "value"
+        ],
+        "question": "What are the different models wthat are lighter than 3500 but were not built by the Ford Motor Company?",
+        "question_toks": [
+            "What",
+            "are",
+            "the",
+            "different",
+            "models",
+            "wthat",
+            "are",
+            "lighter",
+            "than",
+            "3500",
+            "but",
+            "were",
+            "not",
+            "built",
+            "by",
+            "the",
+            "Ford",
+            "Motor",
+            "Company",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        3
+                    ],
+                    [
+                        "table_unit",
+                        4
+                    ],
+                    [
+                        "table_unit",
+                        5
+                    ],
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                12,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            14,
+                            false
+                        ],
+                        null
+                    ],
+                    "and",
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                13,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            16,
+                            false
+                        ],
+                        null
+                    ],
+                    "and",
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                11,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            6,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                12,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    false,
+                    4,
+                    [
+                        0,
+                        [
+                            0,
+                            21,
+                            false
+                        ],
+                        null
+                    ],
+                    3500.0,
+                    null
+                ],
+                "and",
+                [
+                    false,
+                    7,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Ford Motor Company\"",
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT CountryName FROM countries EXCEPT SELECT T1.CountryName FROM countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.countryId  =  T2.Country;",
+        "query_toks": [
+            "SELECT",
+            "CountryName",
+            "FROM",
+            "countries",
+            "EXCEPT",
+            "SELECT",
+            "T1.CountryName",
+            "FROM",
+            "countries",
+            "AS",
+            "T1",
+            "JOIN",
+            "CAR_MAKERS",
+            "AS",
+            "T2",
+            "ON",
+            "T1.countryId",
+            "=",
+            "T2.Country",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "countryname",
+            "from",
+            "countries",
+            "except",
+            "select",
+            "t1",
+            ".",
+            "countryname",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "countryid",
+            "=",
+            "t2",
+            ".",
+            "country"
+        ],
+        "question": "What are the name of the countries where there is not a single car maker?",
+        "question_toks": [
+            "What",
+            "are",
+            "the",
+            "name",
+            "of",
+            "the",
+            "countries",
+            "where",
+            "there",
+            "is",
+            "not",
+            "a",
+            "single",
+            "car",
+            "maker",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        1
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": {
+                "from": {
+                    "table_units": [
+                        [
+                            "table_unit",
+                            1
+                        ],
+                        [
+                            "table_unit",
+                            2
+                        ]
+                    ],
+                    "conds": [
+                        [
+                            false,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    3,
+                                    false
+                                ],
+                                null
+                            ],
+                            [
+                                0,
+                                9,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                },
+                "select": [
+                    false,
+                    [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    4,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ]
+                ],
+                "where": [],
+                "groupBy": [],
+                "having": [],
+                "orderBy": [],
+                "limit": null,
+                "intersect": null,
+                "union": null,
+                "except": null
+            }
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT CountryName FROM countries EXCEPT SELECT T1.CountryName FROM countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.countryId  =  T2.Country;",
+        "query_toks": [
+            "SELECT",
+            "CountryName",
+            "FROM",
+            "countries",
+            "EXCEPT",
+            "SELECT",
+            "T1.CountryName",
+            "FROM",
+            "countries",
+            "AS",
+            "T1",
+            "JOIN",
+            "CAR_MAKERS",
+            "AS",
+            "T2",
+            "ON",
+            "T1.countryId",
+            "=",
+            "T2.Country",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "countryname",
+            "from",
+            "countries",
+            "except",
+            "select",
+            "t1",
+            ".",
+            "countryname",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "countryid",
+            "=",
+            "t2",
+            ".",
+            "country"
+        ],
+        "question": "What are the names of the countries with no car makers?",
+        "question_toks": [
+            "What",
+            "are",
+            "the",
+            "names",
+            "of",
+            "the",
+            "countries",
+            "with",
+            "no",
+            "car",
+            "makers",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        1
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": {
+                "from": {
+                    "table_units": [
+                        [
+                            "table_unit",
+                            1
+                        ],
+                        [
+                            "table_unit",
+                            2
+                        ]
+                    ],
+                    "conds": [
+                        [
+                            false,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    3,
+                                    false
+                                ],
+                                null
+                            ],
+                            [
+                                0,
+                                9,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                },
+                "select": [
+                    false,
+                    [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    4,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ]
+                ],
+                "where": [],
+                "groupBy": [],
+                "having": [],
+                "orderBy": [],
+                "limit": null,
+                "intersect": null,
+                "union": null,
+                "except": null
+            }
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "select t1.id ,  t1.maker from car_makers as t1 join model_list as t2 on t1.id  =  t2.maker group by t1.id having count(*)  >=  2 intersect select t1.id ,  t1.maker from car_makers as t1 join model_list as t2 on t1.id  =  t2.maker join car_names as t3 on t2.model  =  t3.model group by t1.id having count(*)  >  3;",
+        "query_toks": [
+            "select",
+            "t1.id",
+            ",",
+            "t1.maker",
+            "from",
+            "car_makers",
+            "as",
+            "t1",
+            "join",
+            "model_list",
+            "as",
+            "t2",
+            "on",
+            "t1.id",
+            "=",
+            "t2.maker",
+            "group",
+            "by",
+            "t1.id",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">=",
+            "2",
+            "intersect",
+            "select",
+            "t1.id",
+            ",",
+            "t1.maker",
+            "from",
+            "car_makers",
+            "as",
+            "t1",
+            "join",
+            "model_list",
+            "as",
+            "t2",
+            "on",
+            "t1.id",
+            "=",
+            "t2.maker",
+            "join",
+            "car_names",
+            "as",
+            "t3",
+            "on",
+            "t2.model",
+            "=",
+            "t3.model",
+            "group",
+            "by",
+            "t1.id",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "3",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t1",
+            ".",
+            "id",
+            ",",
+            "t1",
+            ".",
+            "maker",
+            "from",
+            "car_makers",
+            "as",
+            "t1",
+            "join",
+            "model_list",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "id",
+            "=",
+            "t2",
+            ".",
+            "maker",
+            "group",
+            "by",
+            "t1",
+            ".",
+            "id",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "=",
+            "value",
+            "intersect",
+            "select",
+            "t1",
+            ".",
+            "id",
+            ",",
+            "t1",
+            ".",
+            "maker",
+            "from",
+            "car_makers",
+            "as",
+            "t1",
+            "join",
+            "model_list",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "id",
+            "=",
+            "t2",
+            ".",
+            "maker",
+            "join",
+            "car_names",
+            "as",
+            "t3",
+            "on",
+            "t2",
+            ".",
+            "model",
+            "=",
+            "t3",
+            ".",
+            "model",
+            "group",
+            "by",
+            "t1",
+            ".",
+            "id",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "value"
+        ],
+        "question": "Which are the car makers which produce at least 2 models and more than 3 car makers ? List the id and the maker .",
+        "question_toks": [
+            "Which",
+            "are",
+            "the",
+            "car",
+            "makers",
+            "which",
+            "produce",
+            "at",
+            "least",
+            "2",
+            "models",
+            "and",
+            "more",
+            "than",
+            "3",
+            "car",
+            "makers",
+            "?",
+            "List",
+            "the",
+            "id",
+            "and",
+            "the",
+            "maker",
+            "."
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        2
+                    ],
+                    [
+                        "table_unit",
+                        3
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                6,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            11,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                6,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                7,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [
+                [
+                    0,
+                    6,
+                    false
+                ]
+            ],
+            "having": [
+                [
+                    false,
+                    5,
+                    [
+                        0,
+                        [
+                            3,
+                            0,
+                            false
+                        ],
+                        null
+                    ],
+                    2.0,
+                    null
+                ]
+            ],
+            "orderBy": [],
+            "limit": null,
+            "intersect": {
+                "from": {
+                    "table_units": [
+                        [
+                            "table_unit",
+                            2
+                        ],
+                        [
+                            "table_unit",
+                            3
+                        ],
+                        [
+                            "table_unit",
+                            4
+                        ]
+                    ],
+                    "conds": [
+                        [
+                            false,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    6,
+                                    false
+                                ],
+                                null
+                            ],
+                            [
+                                0,
+                                11,
+                                false
+                            ],
+                            null
+                        ],
+                        "and",
+                        [
+                            false,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    12,
+                                    false
+                                ],
+                                null
+                            ],
+                            [
+                                0,
+                                14,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                },
+                "select": [
+                    false,
+                    [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    6,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    7,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ]
+                ],
+                "where": [],
+                "groupBy": [
+                    [
+                        0,
+                        6,
+                        false
+                    ]
+                ],
+                "having": [
+                    [
+                        false,
+                        3,
+                        [
+                            0,
+                            [
+                                3,
+                                0,
+                                false
+                            ],
+                            null
+                        ],
+                        3.0,
+                        null
+                    ]
+                ],
+                "orderBy": [],
+                "limit": null,
+                "intersect": null,
+                "union": null,
+                "except": null
+            },
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT T1.Id ,  T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id HAVING count(*)  >=  2 INTERSECT SELECT T1.Id ,  T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model GROUP BY T1.Id HAVING count(*)  >  3;",
+        "query_toks": [
+            "SELECT",
+            "T1.Id",
+            ",",
+            "T1.Maker",
+            "FROM",
+            "CAR_MAKERS",
+            "AS",
+            "T1",
+            "JOIN",
+            "MODEL_LIST",
+            "AS",
+            "T2",
+            "ON",
+            "T1.Id",
+            "=",
+            "T2.Maker",
+            "GROUP",
+            "BY",
+            "T1.Id",
+            "HAVING",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "=",
+            "2",
+            "INTERSECT",
+            "SELECT",
+            "T1.Id",
+            ",",
+            "T1.Maker",
+            "FROM",
+            "CAR_MAKERS",
+            "AS",
+            "T1",
+            "JOIN",
+            "MODEL_LIST",
+            "AS",
+            "T2",
+            "ON",
+            "T1.Id",
+            "=",
+            "T2.Maker",
+            "JOIN",
+            "CAR_NAMES",
+            "AS",
+            "T3",
+            "ON",
+            "T2.model",
+            "=",
+            "T3.model",
+            "GROUP",
+            "BY",
+            "T1.Id",
+            "HAVING",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "3",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t1",
+            ".",
+            "id",
+            ",",
+            "t1",
+            ".",
+            "maker",
+            "from",
+            "car_makers",
+            "as",
+            "t1",
+            "join",
+            "model_list",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "id",
+            "=",
+            "t2",
+            ".",
+            "maker",
+            "group",
+            "by",
+            "t1",
+            ".",
+            "id",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "=",
+            "value",
+            "intersect",
+            "select",
+            "t1",
+            ".",
+            "id",
+            ",",
+            "t1",
+            ".",
+            "maker",
+            "from",
+            "car_makers",
+            "as",
+            "t1",
+            "join",
+            "model_list",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "id",
+            "=",
+            "t2",
+            ".",
+            "maker",
+            "join",
+            "car_names",
+            "as",
+            "t3",
+            "on",
+            "t2",
+            ".",
+            "model",
+            "=",
+            "t3",
+            ".",
+            "model",
+            "group",
+            "by",
+            "t1",
+            ".",
+            "id",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "value"
+        ],
+        "question": "What are the ids and makers of all car makers that produce at least 2 models and make more than 3 cars?",
+        "question_toks": [
+            "What",
+            "are",
+            "the",
+            "ids",
+            "and",
+            "makers",
+            "of",
+            "all",
+            "car",
+            "makers",
+            "that",
+            "produce",
+            "at",
+            "least",
+            "2",
+            "models",
+            "and",
+            "make",
+            "more",
+            "than",
+            "3",
+            "cars",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        2
+                    ],
+                    [
+                        "table_unit",
+                        3
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                6,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            11,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                6,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                7,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [
+                [
+                    0,
+                    6,
+                    false
+                ]
+            ],
+            "having": [
+                [
+                    false,
+                    5,
+                    [
+                        0,
+                        [
+                            3,
+                            0,
+                            false
+                        ],
+                        null
+                    ],
+                    2.0,
+                    null
+                ]
+            ],
+            "orderBy": [],
+            "limit": null,
+            "intersect": {
+                "from": {
+                    "table_units": [
+                        [
+                            "table_unit",
+                            2
+                        ],
+                        [
+                            "table_unit",
+                            3
+                        ],
+                        [
+                            "table_unit",
+                            4
+                        ]
+                    ],
+                    "conds": [
+                        [
+                            false,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    6,
+                                    false
+                                ],
+                                null
+                            ],
+                            [
+                                0,
+                                11,
+                                false
+                            ],
+                            null
+                        ],
+                        "and",
+                        [
+                            false,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    12,
+                                    false
+                                ],
+                                null
+                            ],
+                            [
+                                0,
+                                14,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                },
+                "select": [
+                    false,
+                    [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    6,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    7,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ]
+                ],
+                "where": [],
+                "groupBy": [
+                    [
+                        0,
+                        6,
+                        false
+                    ]
+                ],
+                "having": [
+                    [
+                        false,
+                        3,
+                        [
+                            0,
+                            [
+                                3,
+                                0,
+                                false
+                            ],
+                            null
+                        ],
+                        3.0,
+                        null
+                    ]
+                ],
+                "orderBy": [],
+                "limit": null,
+                "intersect": null,
+                "union": null,
+                "except": null
+            },
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  'fiat';",
+        "query_toks": [
+            "SELECT",
+            "T1.countryId",
+            ",",
+            "T1.CountryName",
+            "FROM",
+            "Countries",
+            "AS",
+            "T1",
+            "JOIN",
+            "CAR_MAKERS",
+            "AS",
+            "T2",
+            "ON",
+            "T1.CountryId",
+            "=",
+            "T2.Country",
+            "GROUP",
+            "BY",
+            "T1.countryId",
+            "HAVING",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "3",
+            "UNION",
+            "SELECT",
+            "T1.countryId",
+            ",",
+            "T1.CountryName",
+            "FROM",
+            "Countries",
+            "AS",
+            "T1",
+            "JOIN",
+            "CAR_MAKERS",
+            "AS",
+            "T2",
+            "ON",
+            "T1.CountryId",
+            "=",
+            "T2.Country",
+            "JOIN",
+            "MODEL_LIST",
+            "AS",
+            "T3",
+            "ON",
+            "T2.Id",
+            "=",
+            "T3.Maker",
+            "WHERE",
+            "T3.Model",
+            "=",
+            "'fiat",
+            "'",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t1",
+            ".",
+            "countryid",
+            ",",
+            "t1",
+            ".",
+            "countryname",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "countryid",
+            "=",
+            "t2",
+            ".",
+            "country",
+            "group",
+            "by",
+            "t1",
+            ".",
+            "countryid",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "value",
+            "union",
+            "select",
+            "t1",
+            ".",
+            "countryid",
+            ",",
+            "t1",
+            ".",
+            "countryname",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "countryid",
+            "=",
+            "t2",
+            ".",
+            "country",
+            "join",
+            "model_list",
+            "as",
+            "t3",
+            "on",
+            "t2",
+            ".",
+            "id",
+            "=",
+            "t3",
+            ".",
+            "maker",
+            "where",
+            "t3",
+            ".",
+            "model",
+            "=",
+            "value"
+        ],
+        "question": "What are the id and names of the countries which have more than 3 car makers or produce the 'fiat' model?",
+        "question_toks": [
+            "What",
+            "are",
+            "the",
+            "id",
+            "and",
+            "names",
+            "of",
+            "the",
+            "countries",
+            "which",
+            "have",
+            "more",
+            "than",
+            "3",
+            "car",
+            "makers",
+            "or",
+            "produce",
+            "the",
+            "'fiat",
+            "'",
+            "model",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        1
+                    ],
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                3,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            9,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                3,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [
+                [
+                    0,
+                    3,
+                    false
+                ]
+            ],
+            "having": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            3,
+                            0,
+                            false
+                        ],
+                        null
+                    ],
+                    3.0,
+                    null
+                ]
+            ],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": {
+                "from": {
+                    "table_units": [
+                        [
+                            "table_unit",
+                            1
+                        ],
+                        [
+                            "table_unit",
+                            2
+                        ],
+                        [
+                            "table_unit",
+                            3
+                        ]
+                    ],
+                    "conds": [
+                        [
+                            false,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    3,
+                                    false
+                                ],
+                                null
+                            ],
+                            [
+                                0,
+                                9,
+                                false
+                            ],
+                            null
+                        ],
+                        "and",
+                        [
+                            false,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    6,
+                                    false
+                                ],
+                                null
+                            ],
+                            [
+                                0,
+                                11,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                },
+                "select": [
+                    false,
+                    [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    3,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    4,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ]
+                ],
+                "where": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                12,
+                                false
+                            ],
+                            null
+                        ],
+                        "\"fiat\"",
+                        null
+                    ]
+                ],
+                "groupBy": [],
+                "having": [],
+                "orderBy": [],
+                "limit": null,
+                "intersect": null,
+                "union": null,
+                "except": null
+            },
+            "except": null
+        }
+    },
+    {
+        "db_id": "car_1",
+        "query": "select t1.countryid ,  t1.countryname from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  3 union select t1.countryid ,  t1.countryname from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country join model_list as t3 on t2.id  =  t3.maker where t3.model  =  'fiat';",
+        "query_toks": [
+            "select",
+            "t1.countryid",
+            ",",
+            "t1.countryname",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1.countryid",
+            "=",
+            "t2.country",
+            "group",
+            "by",
+            "t1.countryid",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "3",
+            "union",
+            "select",
+            "t1.countryid",
+            ",",
+            "t1.countryname",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1.countryid",
+            "=",
+            "t2.country",
+            "join",
+            "model_list",
+            "as",
+            "t3",
+            "on",
+            "t2.id",
+            "=",
+            "t3.maker",
+            "where",
+            "t3.model",
+            "=",
+            "\"fiat\"",
+            ";"
+        ],
+        "query_toks_no_value": [
+            "select",
+            "t1",
+            ".",
+            "countryid",
+            ",",
+            "t1",
+            ".",
+            "countryname",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "countryid",
+            "=",
+            "t2",
+            ".",
+            "country",
+            "group",
+            "by",
+            "t1",
+            ".",
+            "countryid",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "value",
+            "union",
+            "select",
+            "t1",
+            ".",
+            "countryid",
+            ",",
+            "t1",
+            ".",
+            "countryname",
+            "from",
+            "countries",
+            "as",
+            "t1",
+            "join",
+            "car_makers",
+            "as",
+            "t2",
+            "on",
+            "t1",
+            ".",
+            "countryid",
+            "=",
+            "t2",
+            ".",
+            "country",
+            "join",
+            "model_list",
+            "as",
+            "t3",
+            "on",
+            "t2",
+            ".",
+            "id",
+            "=",
+            "t3",
+            ".",
+            "maker",
+            "where",
+            "t3",
+            ".",
+            "model",
+            "=",
+            "value"
+        ],
+        "question": "What are the ids and names of all countries that either have more than 3 car makers or produce fiat model ?",
+        "question_toks": [
+            "What",
+            "are",
+            "the",
+            "ids",
+            "and",
+            "names",
+            "of",
+            "all",
+            "countries",
+            "that",
+            "either",
+            "have",
+            "more",
+            "than",
+            "3",
+            "car",
+            "makers",
+            "or",
+            "produce",
+            "fiat",
+            "model",
+            "?"
+        ],
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        1
+                    ],
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                3,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            9,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                3,
+                                false
+                            ],
+                            null
+                        ]
+                    ],
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [
+                [
+                    0,
+                    3,
+                    false
+                ]
+            ],
+            "having": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            3,
+                            0,
+                            false
+                        ],
+                        null
+                    ],
+                    3.0,
+                    null
+                ]
+            ],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": {
+                "from": {
+                    "table_units": [
+                        [
+                            "table_unit",
+                            1
+                        ],
+                        [
+                            "table_unit",
+                            2
+                        ],
+                        [
+                            "table_unit",
+                            3
+                        ]
+                    ],
+                    "conds": [
+                        [
+                            false,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    3,
+                                    false
+                                ],
+                                null
+                            ],
+                            [
+                                0,
+                                9,
+                                false
+                            ],
+                            null
+                        ],
+                        "and",
+                        [
+                            false,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    6,
+                                    false
+                                ],
+                                null
+                            ],
+                            [
+                                0,
+                                11,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                },
+                "select": [
+                    false,
+                    [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    3,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    4,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ]
+                ],
+                "where": [
+                    [
+                        false,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                12,
+                                false
+                            ],
+                            null
+                        ],
+                        "\"fiat\"",
+                        null
+                    ]
+                ],
+                "groupBy": [],
+                "having": [],
+                "orderBy": [],
+                "limit": null,
+                "intersect": null,
+                "union": null,
+                "except": null
+            },
+            "except": null
+        }
+    }
+]

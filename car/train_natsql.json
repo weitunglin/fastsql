@@ -1,0 +1,3874 @@
+[
+  {
+    "NatSQL": "select count ( continents.* )  from continents ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( continents.* )  from continents ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select continents.ContId , continents.Continent , count ( countries.* )  from countries  group by continents.ContId ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select continents.ContId , continents.Continent , count ( countries.* )  from countries  group by continents.ContId ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( countries.* )  from countries ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( countries.* )  from countries ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_makers.FullName , car_makers.Id , count ( model_list.* )  from car_makers  group by car_makers.Id ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_makers.FullName , car_makers.Id , count ( model_list.* )  from car_makers  group by car_makers.Id ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_names.Model from car_names  order by cars_data.Horsepower asc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_names.Model from car_names  order by cars_data.Horsepower asc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_names.Model from car_names  where  @.@ < avg ( cars_data.Weight )  ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            5,
+            26,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_names.Model from car_names  where  @.@ < avg ( cars_data.Weight )  ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            5,
+            26,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select  distinct car_makers.Maker from car_makers  where  cars_data.Year = \"1970\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          "\"1970\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select  distinct car_makers.Maker from car_makers  where  cars_data.Year = \"1970\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          "\"1970\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_names.Make , cars_data.Year from cars_data  where  @.@ = min ( cars_data.Year )  ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            2,
+            28,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_names.Make , cars_data.Year from cars_data  where  @.@ = min ( cars_data.Year )  ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              "@.@",
+              false
+            ],
+            null
+          ],
+          [
+            2,
+            28,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select  distinct model_list.Model from model_list  where  cars_data.Year > 1980 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          1980,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select  distinct model_list.Model from model_list  where  cars_data.Year > 1980 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          1980,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select continents.Continent , count ( car_makers.* )  from car_makers  group by continents.Continent ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select continents.Continent , count ( car_makers.* )  from car_makers  group by continents.Continent ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select countries.CountryName from car_makers  group by car_makers.Country  order by count ( car_makers.* )  desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select countries.CountryName from car_makers  group by car_makers.Country  order by count ( car_makers.* )  desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( model_list.* )  , car_makers.FullName  from model_list  group by car_makers.Id ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( model_list.* )  , car_makers.FullName, car_makers.id   from model_list  group by car_makers.Id ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select cars_data.Accelerate from cars_data  where  car_names.Make = \"amc hornet sportabout (sw)\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              19,
+              false
+            ],
+            null
+          ],
+          "\"amc hornet sportabout (sw)\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select cars_data.Accelerate from cars_data  where  car_names.Make = \"amc hornet sportabout (sw)\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              19,
+              false
+            ],
+            null
+          ],
+          "\"amc hornet sportabout (sw)\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( car_makers.* )  from car_makers  where  countries.CountryName = \"france\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"france\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( car_makers.* )  from car_makers  where  countries.CountryName = \"france\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"france\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( model_list.* )  from model_list  where  countries.CountryName = \"usa\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"usa\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( model_list.* )  from model_list  where  countries.CountryName = \"usa\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"usa\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select avg ( cars_data.MPG )  from cars_data  where  cars_data.Cylinders = 4 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          4,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select avg ( cars_data.MPG )  from cars_data  where  cars_data.Cylinders = 4 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          4,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select min(cars_data.Weight) from cars_data  where  cars_data.Cylinders = 8  and  cars_data.Year = 1974",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          8,
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          1974,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              26,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select min(cars_data.Weight) from cars_data  where  cars_data.Cylinders = 8  and  cars_data.Year = 1974",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          8,
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          1974,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              26,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select model_list.Maker , model_list.Model from model_list ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select model_list.Maker , model_list.Model from model_list ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select countries.CountryName , countries.CountryId from car_makers  where  count ( car_makers.* )  >= 1  group by countries.CountryId ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              7,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select countries.CountryName , countries.CountryId from car_makers  where  count ( car_makers.* )  >= 1  group by countries.CountryId ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              7,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( cars_data.* )  from cars_data  where  cars_data.Horsepower > 150 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ],
+          150,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( cars_data.* )  from cars_data  where  cars_data.Horsepower > 150 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ],
+          150,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select avg ( cars_data.Weight )  , cars_data.Year from cars_data  group by cars_data.Year ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          28,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select avg ( cars_data.Weight )  , cars_data.Year from cars_data  group by cars_data.Year ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          28,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select countries.CountryName from car_makers  where  continents.Continent = \"europe\"  and  count ( car_makers.* )  >= 3  group by countries.CountryName ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"europe\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              7,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select countries.CountryName from car_makers  where  continents.Continent = \"europe\"  and  count ( car_makers.* )  >= 3  group by countries.CountryName ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"europe\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              7,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select cars_data.Horsepower , car_names.Make from car_names  where  cars_data.Cylinders = 3  order by cars_data.Horsepower desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select cars_data.Horsepower , car_names.Make from car_names  where  cars_data.Cylinders = 3  order by cars_data.Horsepower desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_names.Model from cars_data  order by cars_data.MPG desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_names.Model from car_names  order by cars_data.MPG desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select avg ( cars_data.Horsepower )  from cars_data  where  cars_data.Year < 1980 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          1980,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select avg ( cars_data.Horsepower )  from cars_data  where  cars_data.Year < 1980 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          1980,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select avg ( cars_data.Edispl )  from car_names  where  car_names.Model = \"volvo\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          "\"volvo\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select avg ( cars_data.Edispl )  from car_names  where  car_names.Model = \"volvo\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          "\"volvo\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select max ( cars_data.Accelerate )  , cars_data.Cylinders from cars_data  group by cars_data.Cylinders ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select max ( cars_data.Accelerate )  , cars_data.Cylinders from cars_data  group by cars_data.Cylinders ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_names.Model from car_names  group by car_names.Model  order by count ( car_names.* )  desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          18,
+          false
+        ]
+      ],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_names.Model from car_names  group by car_names.Model  order by count ( car_names.* )  desc limit 1",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          18,
+          false
+        ]
+      ],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "having": [],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( cars_data.* )  from cars_data  where  cars_data.Cylinders > 4 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          4,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( cars_data.* )  from cars_data  where  cars_data.Cylinders > 4 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          4,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( cars_data.* )  from cars_data  where  cars_data.Year = 1980 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          1980,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( cars_data.* )  from cars_data  where  cars_data.Year = 1980 ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          1980,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( model_list.* )  from model_list  where  car_makers.FullName = \"American Motor Company\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"American Motor Company\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select count ( model_list.* )  from model_list  where  car_makers.FullName = \"American Motor Company\" ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"American Motor Company\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_makers.FullName , car_makers.Id from model_list  where  count ( model_list.* )  > 3  group by car_makers.Id ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              12,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  },
+  {
+    "NatSQL": "select car_makers.FullName , car_makers.Id from model_list  where  count ( model_list.* )  > 3  group by car_makers.Id ",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              12,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "orderBy": [],
+      "having": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null,
+      "db_id": "car_1"
+    }
+  }
+]

@@ -246,7 +246,7 @@ def _train(opt):
                 optimizer.step()
                 optimizer.zero_grad()
             
-            if train_step % num_checkpoint_steps == 0 and epoch >= 10:
+            if train_step % num_checkpoint_steps == 0 and epoch >= 6:
             # if train_step % num_checkpoint_steps == 0:
                 print(f"At {train_step} training step, save a checkpoint.")
                 os.makedirs(opt.save_path, exist_ok = True)

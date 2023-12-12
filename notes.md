@@ -76,12 +76,50 @@ sh scripts/inference/infer_text2natsql.sh base-custom spider
     "EXEC": 0.8017408123791102
 }
 
-## dog_kennels dev result w/ pretrained text2natsql-t5-base
+## dog_kennels
+
+### dog_kennels dev result w/ pretrained text2natsql-t5-base
 
 {
     "ckpt": "./models/text2natsql-t5-base/checkpoint-14352",
     "EM": 0.5909090909090909,
     "EXEC": 0.8636363636363636
+}
+
+### dog_kennels dev result w/ finetuned lora on text2natsql-t5-base
+
+{
+  "lora_ckpt": "./models/text2natsql-t5-base-dog-kennels-lora/checkpoint-651.lora",
+  "ckpt": "./models/text2natsql-t5-base/checkpoint-14352",
+  "EM": 0.6666666666666666,
+  "EXEC": 0.9523809523809523
+}
+
+### dog_kennels dev result w/ full finetuned text2natsql-t5-base 
+
+{
+  "ckpt": "./models/text2natsql-t5-base-dog-kennels/checkpoint-21",
+  "EM": 0.5238095238095238,
+  "EXEC": 0.9047619047619048
+}
+
+## car
+
+### car dev result w/ pretrained text2natsql-t5-base
+
+{
+  "ckpt": "./models/text2natsql-t5-base/checkpoint-14352",
+  "EM": 0.4642857142857143,
+  "EXEC": 0.6071428571428571
+}
+
+### car dev result w/ finetuned lora on text2natsql-t5-base
+
+{
+  "lora_ckpt": "./models/text2natsql-t5-base-car-lora/checkpoint-912.lora",
+  "ckpt": "./models/text2natsql-t5-base/checkpoint-14352",
+  "EM": 0.5,
+  "EXEC": 0.7142857142857143
 }
 
 ## dataset sample / db count

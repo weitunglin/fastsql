@@ -1,0 +1,7866 @@
+[
+  {
+    "question": "Which distinctive models are produced by maker with the full name General Motors or weighing more than 3500?",
+    "db_id": "car_1",
+    "sql": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;",
+    "norm_sql": "select distinct model_list.model from car_names join model_list on car_names.model = model_list.model join car_makers on model_list.maker = car_makers.id join cars_data on car_names.makeid = cars_data.id where car_makers.fullname = 'General Motors' or cars_data.weight > 3500",
+    "sql_skeleton": "select distinct _ from _ where _",
+    "natsql": "select  distinct model_list.Model from car_names  where  car_makers.FullName = \"General Motors\"  or  cars_data.Weight > 3500",
+    "norm_natsql": "select distinct model_list.model from car_names where car_makers.fullname = 'General Motors' or cars_data.weight > 3500",
+    "natsql_skeleton": "select distinct _ from _ where _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [
+            "General Motors"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What are the different models created by either the car maker General Motors or weighed more than 3500?",
+    "db_id": "car_1",
+    "sql": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;",
+    "norm_sql": "select distinct model_list.model from car_names join model_list on car_names.model = model_list.model join car_makers on model_list.maker = car_makers.id join cars_data on car_names.makeid = cars_data.id where car_makers.fullname = 'General Motors' or cars_data.weight > 3500",
+    "sql_skeleton": "select distinct _ from _ where _",
+    "natsql": "select  distinct model_list.Model from car_names  where  car_makers.FullName = \"General Motors\"  or  cars_data.Weight > 3500",
+    "norm_natsql": "select distinct model_list.model from car_names where car_makers.fullname = 'General Motors' or cars_data.weight > 3500",
+    "natsql_skeleton": "select distinct _ from _ where _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [
+            "General Motors"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "In which years cars were produced weighing no less than 3000 and no more than 4000 ?",
+    "db_id": "car_1",
+    "sql": "select distinct year from cars_data where weight between 3000 and 4000;",
+    "norm_sql": "select distinct year from cars_data where weight between 3000 and 4000",
+    "sql_skeleton": "select distinct _ from _ where _ between _ and _",
+    "natsql": "select  distinct cars_data.Year from cars_data  where  cars_data.Weight between 3000 and 4000",
+    "norm_natsql": "select distinct cars_data.year from cars_data where cars_data.weight between 3000 and 4000",
+    "natsql_skeleton": "select distinct _ from _ where _ between _ and _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "question": "What are the different years in which there were cars produced that weighed less than 4000 and also cars that weighted more than 3000 ?",
+    "db_id": "car_1",
+    "sql": "select distinct year from cars_data where weight between 3000 and 4000;",
+    "norm_sql": "select distinct year from cars_data where weight between 3000 and 4000",
+    "sql_skeleton": "select distinct _ from _ where _ between _ and _",
+    "natsql": "select  distinct cars_data.Year from cars_data  where  cars_data.Weight between 3000 and 4000",
+    "norm_natsql": "select distinct cars_data.year from cars_data where cars_data.weight between 3000 and 4000",
+    "natsql_skeleton": "select distinct _ from _ where _ between _ and _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "question": "What is the horsepower of the car with the largest accelerate?",
+    "db_id": "car_1",
+    "sql": "SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1;",
+    "norm_sql": "select cars_data.horsepower from cars_data order by cars_data.accelerate desc limit 1",
+    "sql_skeleton": "select _ from _ order by _ desc limit _",
+    "natsql": "select cars_data.Horsepower from cars_data  order by cars_data.Accelerate desc limit 1",
+    "norm_natsql": "select cars_data.horsepower from cars_data order by cars_data.accelerate desc limit 1",
+    "natsql_skeleton": "select _ from _ order by _ desc limit _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What is the horsepower of the car with the greatest accelerate?",
+    "db_id": "car_1",
+    "sql": "SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1;",
+    "norm_sql": "select cars_data.horsepower from cars_data order by cars_data.accelerate desc limit 1",
+    "sql_skeleton": "select _ from _ order by _ desc limit _",
+    "natsql": "select cars_data.Horsepower from cars_data  order by cars_data.Accelerate desc limit 1",
+    "norm_natsql": "select cars_data.horsepower from cars_data order by cars_data.accelerate desc limit 1",
+    "natsql_skeleton": "select _ from _ order by _ desc limit _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "For model volvo, how many cylinders does the car with the least accelerate have?",
+    "db_id": "car_1",
+    "sql": "SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  'volvo' ORDER BY T1.accelerate ASC LIMIT 1;",
+    "norm_sql": "select cars_data.cylinders from cars_data join car_names on cars_data.id = car_names.makeid where car_names.model = 'volvo' order by cars_data.accelerate asc limit 1",
+    "sql_skeleton": "select _ from _ where _ order by _ asc limit _",
+    "natsql": "select cars_data.Cylinders from cars_data  where  car_names.Model = \"volvo\"  order by cars_data.Accelerate asc limit 1",
+    "norm_natsql": "select cars_data.cylinders from cars_data where car_names.model = 'volvo' order by cars_data.accelerate asc limit 1",
+    "natsql_skeleton": "select _ from _ where _ order by _ asc limit _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "volvo"
+          ],
+          [
+            "Volvo"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [
+            "volvo"
+          ]
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "volvo"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "For a volvo model, how many cylinders does the version with least accelerate have?",
+    "db_id": "car_1",
+    "sql": "SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  'volvo' ORDER BY T1.accelerate ASC LIMIT 1;",
+    "norm_sql": "select cars_data.cylinders from cars_data join car_names on cars_data.id = car_names.makeid where car_names.model = 'volvo' order by cars_data.accelerate asc limit 1",
+    "sql_skeleton": "select _ from _ where _ order by _ asc limit _",
+    "natsql": "select cars_data.Cylinders from cars_data  where  car_names.Model = \"volvo\"  order by cars_data.Accelerate asc limit 1",
+    "norm_natsql": "select cars_data.cylinders from cars_data where car_names.model = 'volvo' order by cars_data.accelerate asc limit 1",
+    "natsql_skeleton": "select _ from _ where _ order by _ asc limit _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "volvo"
+          ],
+          [
+            "Volvo"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [
+            "volvo"
+          ]
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "volvo"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "How many cars have a larger accelerate than the car with the largest horsepower?",
+    "db_id": "car_1",
+    "sql": "SELECT COUNT(*) FROM CARS_DATA WHERE Accelerate  >  ( SELECT Accelerate FROM CARS_DATA ORDER BY Horsepower DESC LIMIT 1 );",
+    "norm_sql": "select count ( * ) from cars_data where accelerate > ( select accelerate from cars_data order by horsepower desc limit 1 )",
+    "sql_skeleton": "select count ( _ ) from _ where _ > ( select _ from _ order by _ desc limit _ )",
+    "natsql": "select count ( cars_data.* )  from cars_data  where  @.@ > cars_data.Accelerate  order by cars_data.Horsepower desc limit 1",
+    "norm_natsql": "select count ( cars_data.* ) from cars_data where @.@ > cars_data.accelerate order by cars_data.horsepower desc limit 1",
+    "natsql_skeleton": "select count ( _ ) from _ where @.@ > _ order by _ desc limit _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What is the number of cars with a greater accelerate than the one with the most horsepower?",
+    "db_id": "car_1",
+    "sql": "SELECT COUNT(*) FROM CARS_DATA WHERE Accelerate  >  ( SELECT Accelerate FROM CARS_DATA ORDER BY Horsepower DESC LIMIT 1 );",
+    "norm_sql": "select count ( * ) from cars_data where accelerate > ( select accelerate from cars_data order by horsepower desc limit 1 )",
+    "sql_skeleton": "select count ( _ ) from _ where _ > ( select _ from _ order by _ desc limit _ )",
+    "natsql": "select count ( cars_data.* )  from cars_data  where  @.@ > cars_data.Accelerate  order by cars_data.Horsepower desc limit 1",
+    "norm_natsql": "select count ( cars_data.* ) from cars_data where @.@ > cars_data.accelerate order by cars_data.horsepower desc limit 1",
+    "natsql_skeleton": "select count ( _ ) from _ where @.@ > _ order by _ desc limit _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "How many countries has more than 2 car makers ?",
+    "db_id": "car_1",
+    "sql": "select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2",
+    "norm_sql": "select count ( * ) from countries join car_makers on countries.countryid = car_makers.country group by countries.countryid having count ( * ) > 2",
+    "sql_skeleton": "select count ( _ ) from _ group by _ having count ( _ ) > _",
+    "natsql": "select count ( countries.* )  from countries  where  count ( car_makers.* )  > 2",
+    "norm_natsql": "select count ( countries.* ) from countries where count ( car_makers.* ) > 2",
+    "natsql_skeleton": "select count ( _ ) from _ where count ( _ ) > _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What is the number of countries with more than 2 car makers ?",
+    "db_id": "car_1",
+    "sql": "select count(*) from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  2",
+    "norm_sql": "select count ( * ) from countries join car_makers on countries.countryid = car_makers.country group by countries.countryid having count ( * ) > 2",
+    "sql_skeleton": "select count ( _ ) from _ group by _ having count ( _ ) > _",
+    "natsql": "select count ( countries.* )  from countries  where  count ( car_makers.* )  > 2",
+    "norm_natsql": "select count ( countries.* ) from countries where count ( car_makers.* ) > 2",
+    "natsql_skeleton": "select count ( _ ) from _ where count ( _ ) > _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "How many cars has over 6 cylinders?",
+    "db_id": "car_1",
+    "sql": "SELECT COUNT(*) FROM CARS_DATA WHERE Cylinders  >  6;",
+    "norm_sql": "select count ( * ) from cars_data where cylinders > 6",
+    "sql_skeleton": "select count ( _ ) from _ where _",
+    "natsql": "select count ( cars_data.* )  from cars_data  where  cars_data.Cylinders > 6",
+    "norm_natsql": "select count ( cars_data.* ) from cars_data where cars_data.cylinders > 6",
+    "natsql_skeleton": "select count ( _ ) from _ where _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What is the number of carsw ith over 6 cylinders?",
+    "db_id": "car_1",
+    "sql": "SELECT COUNT(*) FROM CARS_DATA WHERE Cylinders  >  6;",
+    "norm_sql": "select count ( * ) from cars_data where cylinders > 6",
+    "sql_skeleton": "select count ( _ ) from _ where _",
+    "natsql": "select count ( cars_data.* )  from cars_data  where  cars_data.Cylinders > 6",
+    "norm_natsql": "select count ( cars_data.* ) from cars_data where cars_data.cylinders > 6",
+    "natsql_skeleton": "select count ( _ ) from _ where _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "For the cars with 4 cylinders, which model has the largest horsepower?",
+    "db_id": "car_1",
+    "sql": "SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Cylinders  =  4 ORDER BY T2.horsepower DESC LIMIT 1;",
+    "norm_sql": "select car_names.model from car_names join cars_data on car_names.makeid = cars_data.id where cars_data.cylinders = 4 order by cars_data.horsepower desc limit 1",
+    "sql_skeleton": "select _ from _ where _ order by _ desc limit _",
+    "natsql": "select car_names.Model from car_names  where  cars_data.Cylinders = 4  order by cars_data.Horsepower desc limit 1",
+    "norm_natsql": "select car_names.model from car_names where cars_data.cylinders = 4 order by cars_data.horsepower desc limit 1",
+    "natsql_skeleton": "select _ from _ where _ order by _ desc limit _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "For all of the 4 cylinder cars, which model has the most horsepower?",
+    "db_id": "car_1",
+    "sql": "SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.Cylinders  =  4 ORDER BY T2.horsepower DESC LIMIT 1;",
+    "norm_sql": "select car_names.model from car_names join cars_data on car_names.makeid = cars_data.id where cars_data.cylinders = 4 order by cars_data.horsepower desc limit 1",
+    "sql_skeleton": "select _ from _ where _ order by _ desc limit _",
+    "natsql": "select car_names.Model from car_names  where  cars_data.Cylinders = 4  order by cars_data.Horsepower desc limit 1",
+    "norm_natsql": "select car_names.model from car_names where cars_data.cylinders = 4 order by cars_data.horsepower desc limit 1",
+    "natsql_skeleton": "select _ from _ where _ order by _ desc limit _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "Among the cars with more than lowest horsepower, which ones do not have more than 3 cylinders? List the car makeid and make name.",
+    "db_id": "car_1",
+    "sql": "SELECT T2.MakeId ,  T2.Make FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T1.Horsepower  >  (SELECT min(Horsepower) FROM CARS_DATA) AND T1.Cylinders  <=  3;",
+    "norm_sql": "select car_names.makeid , car_names.make from cars_data join car_names on cars_data.id = car_names.makeid where cars_data.horsepower > ( select min ( horsepower ) from cars_data ) and cars_data.cylinders <= 3",
+    "sql_skeleton": "select _ from _ where _ > ( select min ( _ ) from _ ) and _",
+    "natsql": "select car_names.MakeId , car_names.Make from cars_data  where  cars_data.Cylinders <= 3  and  @.@ > min ( cars_data.Horsepower )",
+    "norm_natsql": "select car_names.makeid , car_names.make from cars_data where cars_data.cylinders <= 3 and @.@ > min ( cars_data.horsepower )",
+    "natsql_skeleton": "select _ from _ where _ and @.@ > min ( _ )",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "Among the cars that do not have the minimum horsepower , what are the make ids and names of all those with less than 4 cylinders ?",
+    "db_id": "car_1",
+    "sql": "select t2.makeid ,  t2.make from cars_data as t1 join car_names as t2 on t1.id  =  t2.makeid where t1.horsepower  >  (select min(horsepower) from cars_data) and t1.cylinders  <  4;",
+    "norm_sql": "select car_names.makeid , car_names.make from cars_data join car_names on cars_data.id = car_names.makeid where cars_data.horsepower > ( select min ( horsepower ) from cars_data ) and cars_data.cylinders < 4",
+    "sql_skeleton": "select _ from _ where _ > ( select min ( _ ) from _ ) and _",
+    "natsql": "select car_names.MakeId , car_names.Make from cars_data  where  cars_data.Cylinders < 4  and  @.@ > min ( cars_data.Horsepower )",
+    "norm_natsql": "select car_names.makeid , car_names.make from cars_data where cars_data.cylinders < 4 and @.@ > min ( cars_data.horsepower )",
+    "natsql_skeleton": "select _ from _ where _ and @.@ > min ( _ )",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What is the maximum miles per gallon of the car with 8 cylinders or produced before 1980 ?",
+    "db_id": "car_1",
+    "sql": "select max(mpg) from cars_data where cylinders  =  8 or year  <  1980",
+    "norm_sql": "select max ( mpg ) from cars_data where cylinders = 8 or year < 1980",
+    "sql_skeleton": "select max ( _ ) from _ where _",
+    "natsql": "select max(cars_data.MPG) from cars_data  where  cars_data.Cylinders = 8  or  cars_data.Year < 1980",
+    "norm_natsql": "select max ( cars_data.mpg ) from cars_data where cars_data.cylinders = 8 or cars_data.year < 1980",
+    "natsql_skeleton": "select max ( _ ) from _ where _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "question": "What is the maximum mpg of the cars that had 8 cylinders or that were produced before 1980 ?",
+    "db_id": "car_1",
+    "sql": "select max(mpg) from cars_data where cylinders  =  8 or year  <  1980",
+    "norm_sql": "select max ( mpg ) from cars_data where cylinders = 8 or year < 1980",
+    "sql_skeleton": "select max ( _ ) from _ where _",
+    "natsql": "select max(cars_data.MPG) from cars_data  where  cars_data.Cylinders = 8  or  cars_data.Year < 1980",
+    "norm_natsql": "select max ( cars_data.mpg ) from cars_data where cars_data.cylinders = 8 or cars_data.year < 1980",
+    "natsql_skeleton": "select max ( _ ) from _ where _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "question": "Which models are lighter than 3500 but not built by the 'Ford Motor Company'?",
+    "db_id": "car_1",
+    "sql": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != 'Ford Motor Company';",
+    "norm_sql": "select distinct model_list.model from model_list join car_names on model_list.model = car_names.model join cars_data on car_names.makeid = cars_data.id join car_makers on model_list.maker = car_makers.id where cars_data.weight < 3500 and car_makers.fullname != 'Ford Motor Company'",
+    "sql_skeleton": "select distinct _ from _ where _",
+    "natsql": "select  distinct model_list.Model from model_list  where  cars_data.Weight < 3500  and  car_makers.FullName != \"Ford Motor Company\"",
+    "norm_natsql": "select distinct model_list.model from model_list where cars_data.weight < 3500 and car_makers.fullname != 'Ford Motor Company'",
+    "natsql_skeleton": "select distinct _ from _ where _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "ford"
+          ],
+          [
+            "Ford Motor Company"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [
+            "ford"
+          ]
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "ford"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What are the different models wthat are lighter than 3500 but were not built by the Ford Motor Company?",
+    "db_id": "car_1",
+    "sql": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != 'Ford Motor Company';",
+    "norm_sql": "select distinct model_list.model from model_list join car_names on model_list.model = car_names.model join cars_data on car_names.makeid = cars_data.id join car_makers on model_list.maker = car_makers.id where cars_data.weight < 3500 and car_makers.fullname != 'Ford Motor Company'",
+    "sql_skeleton": "select distinct _ from _ where _",
+    "natsql": "select  distinct model_list.Model from model_list  where  cars_data.Weight < 3500  and  car_makers.FullName != \"Ford Motor Company\"",
+    "norm_natsql": "select distinct model_list.model from model_list where cars_data.weight < 3500 and car_makers.fullname != 'Ford Motor Company'",
+    "natsql_skeleton": "select distinct _ from _ where _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "ford"
+          ],
+          [
+            "Ford Motor Company"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [
+            "ford"
+          ]
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "ford"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What are the name of the countries where there is not a single car maker?",
+    "db_id": "car_1",
+    "sql": "SELECT CountryName FROM countries EXCEPT SELECT T1.CountryName FROM countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.countryId  =  T2.Country;",
+    "norm_sql": "select countryname from countries except select countries.countryname from countries join car_makers on countries.countryid = car_makers.country",
+    "sql_skeleton": "select _ from _ except select _ from _",
+    "natsql": "select countries.CountryName from countries  where  except_  @.@ is car_makers.*",
+    "norm_natsql": "select countries.countryname from countries where except_ @.@ is car_makers.*",
+    "natsql_skeleton": "select _ from _ where except_ @.@ is _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What are the names of the countries with no car makers?",
+    "db_id": "car_1",
+    "sql": "SELECT CountryName FROM countries EXCEPT SELECT T1.CountryName FROM countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.countryId  =  T2.Country;",
+    "norm_sql": "select countryname from countries except select countries.countryname from countries join car_makers on countries.countryid = car_makers.country",
+    "sql_skeleton": "select _ from _ except select _ from _",
+    "natsql": "select countries.CountryName from countries  where  except_  @.@ is car_makers.*",
+    "norm_natsql": "select countries.countryname from countries where except_ @.@ is car_makers.*",
+    "natsql_skeleton": "select _ from _ where except_ @.@ is _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "Which are the car makers which produce at least 2 models and more than 3 car makers ? List the id and the maker .",
+    "db_id": "car_1",
+    "sql": "select t1.id ,  t1.maker from car_makers as t1 join model_list as t2 on t1.id  =  t2.maker group by t1.id having count(*)  >=  2 intersect select t1.id ,  t1.maker from car_makers as t1 join model_list as t2 on t1.id  =  t2.maker join car_names as t3 on t2.model  =  t3.model group by t1.id having count(*)  >  3;",
+    "norm_sql": "select car_makers.id , car_makers.maker from car_makers join model_list on car_makers.id = model_list.maker group by car_makers.id having count ( * ) >= 2 intersect select car_makers.id , car_makers.maker from car_makers join model_list on car_makers.id = model_list.maker join car_names on model_list.model = car_names.model group by car_makers.id having count ( * ) > 3",
+    "sql_skeleton": "select _ from _ group by _ having count ( _ ) >= _ intersect select _ from _ group by _ having count ( _ ) > _",
+    "natsql": "select car_makers.Id , car_makers.Maker from car_makers  where  count ( model_list.* )  >= 2  and  count ( car_names.* )  > 3  group by car_makers.Id",
+    "norm_natsql": "select car_makers.id , car_makers.maker from car_makers where count ( model_list.* ) >= 2 and count ( car_names.* ) > 3 group by car_makers.id",
+    "natsql_skeleton": "select _ from _ where count ( _ ) >= _ and count ( _ ) > _ group by _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What are the ids and makers of all car makers that produce at least 2 models and make more than 3 cars?",
+    "db_id": "car_1",
+    "sql": "SELECT T1.Id ,  T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id HAVING count(*)  >=  2 INTERSECT SELECT T1.Id ,  T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model GROUP BY T1.Id HAVING count(*)  >  3;",
+    "norm_sql": "select car_makers.id , car_makers.maker from car_makers join model_list on car_makers.id = model_list.maker group by car_makers.id having count ( * ) >= 2 intersect select car_makers.id , car_makers.maker from car_makers join model_list on car_makers.id = model_list.maker join car_names on model_list.model = car_names.model group by car_makers.id having count ( * ) > 3",
+    "sql_skeleton": "select _ from _ group by _ having count ( _ ) >= _ intersect select _ from _ group by _ having count ( _ ) > _",
+    "natsql": "select car_makers.Id , car_makers.Maker from car_makers  where  count ( model_list.* )  >= 2  and  count ( car_names.* )  > 3  group by car_makers.Id",
+    "norm_natsql": "select car_makers.id , car_makers.maker from car_makers where count ( model_list.* ) >= 2 and count ( car_names.* ) > 3 group by car_makers.id",
+    "natsql_skeleton": "select _ from _ where count ( _ ) >= _ and count ( _ ) > _ group by _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What are the id and names of the countries which have more than 3 car makers or produce the 'fiat' model?",
+    "db_id": "car_1",
+    "sql": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  'fiat';",
+    "norm_sql": "select countries.countryid , countries.countryname from countries join car_makers on countries.countryid = car_makers.country group by countries.countryid having count ( * ) > 3 union select countries.countryid , countries.countryname from countries join car_makers on countries.countryid = car_makers.country join model_list on car_makers.id = model_list.maker where model_list.model = 'fiat'",
+    "sql_skeleton": "select _ from _ group by _ having count ( _ ) > _ union select _ from _ where _",
+    "natsql": "select countries.CountryId , countries.CountryName from countries  where  count ( car_makers.* )  > 3  or  model_list.Model = \"fiat\"  group by countries.CountryId",
+    "norm_natsql": "select countries.countryid , countries.countryname from countries where count ( car_makers.* ) > 3 or model_list.model = 'fiat' group by countries.countryid",
+    "natsql_skeleton": "select _ from _ where count ( _ ) > _ or _ group by _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "fiat"
+          ],
+          [
+            "Fiat"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [
+            "fiat"
+          ]
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "fiat"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "question": "What are the ids and names of all countries that either have more than 3 car makers or produce fiat model ?",
+    "db_id": "car_1",
+    "sql": "select t1.countryid ,  t1.countryname from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  3 union select t1.countryid ,  t1.countryname from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country join model_list as t3 on t2.id  =  t3.maker where t3.model  =  'fiat';",
+    "norm_sql": "select countries.countryid , countries.countryname from countries join car_makers on countries.countryid = car_makers.country group by countries.countryid having count ( * ) > 3 union select countries.countryid , countries.countryname from countries join car_makers on countries.countryid = car_makers.country join model_list on car_makers.id = model_list.maker where model_list.model = 'fiat'",
+    "sql_skeleton": "select _ from _ group by _ having count ( _ ) > _ union select _ from _ where _",
+    "natsql": "select countries.CountryId , countries.CountryName from car_makers  where  count ( car_makers.* )  > 3  or  model_list.Model = \"fiat\"  group by countries.CountryId",
+    "norm_natsql": "select countries.countryid , countries.countryname from car_makers where count ( car_makers.* ) > 3 or model_list.model = 'fiat' group by countries.countryid",
+    "natsql_skeleton": "select _ from _ where count ( _ ) > _ or _ group by _",
+    "db_schema": [
+      {
+        "table_name_original": "continents",
+        "table_name": "continents",
+        "column_names": [
+          "cont id",
+          "continent"
+        ],
+        "column_names_original": [
+          "contid",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "countries",
+        "table_name": "countries",
+        "column_names": [
+          "country id",
+          "country name",
+          "continent"
+        ],
+        "column_names_original": [
+          "countryid",
+          "countryname",
+          "continent"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "car_makers",
+        "table_name": "car makers",
+        "column_names": [
+          "id",
+          "maker",
+          "full name",
+          "country"
+        ],
+        "column_names_original": [
+          "id",
+          "maker",
+          "fullname",
+          "country"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "fiat"
+          ],
+          [
+            "Fiat"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "model_list",
+        "table_name": "model list",
+        "column_names": [
+          "model id",
+          "maker",
+          "model"
+        ],
+        "column_names_original": [
+          "modelid",
+          "maker",
+          "model"
+        ],
+        "column_types": [
+          "number",
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [
+            "fiat"
+          ]
+        ]
+      },
+      {
+        "table_name_original": "car_names",
+        "table_name": "car names",
+        "column_names": [
+          "make id",
+          "model",
+          "make"
+        ],
+        "column_names_original": [
+          "makeid",
+          "model",
+          "make"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [
+            "fiat"
+          ],
+          []
+        ]
+      },
+      {
+        "table_name_original": "cars_data",
+        "table_name": "cars data",
+        "column_names": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_names_original": [
+          "id",
+          "mpg",
+          "cylinders",
+          "edispl",
+          "horsepower",
+          "weight",
+          "accelerate",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "number",
+          "number",
+          "text",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "continents",
+        "column_name_original": "contid"
+      },
+      {
+        "table_name_original": "countries",
+        "column_name_original": "countryid"
+      },
+      {
+        "table_name_original": "car_makers",
+        "column_name_original": "id"
+      },
+      {
+        "table_name_original": "model_list",
+        "column_name_original": "modelid"
+      },
+      {
+        "table_name_original": "car_names",
+        "column_name_original": "makeid"
+      },
+      {
+        "table_name_original": "cars_data",
+        "column_name_original": "id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "countries",
+        "source_column_name_original": "continent",
+        "target_table_name_original": "continents",
+        "target_column_name_original": "contid"
+      },
+      {
+        "source_table_name_original": "car_makers",
+        "source_column_name_original": "country",
+        "target_table_name_original": "countries",
+        "target_column_name_original": "countryid"
+      },
+      {
+        "source_table_name_original": "model_list",
+        "source_column_name_original": "maker",
+        "target_table_name_original": "car_makers",
+        "target_column_name_original": "id"
+      },
+      {
+        "source_table_name_original": "car_names",
+        "source_column_name_original": "model",
+        "target_table_name_original": "model_list",
+        "target_column_name_original": "model"
+      },
+      {
+        "source_table_name_original": "cars_data",
+        "source_column_name_original": "id",
+        "target_table_name_original": "car_names",
+        "target_column_name_original": "makeid"
+      }
+    ],
+    "table_labels": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "column_labels": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  }
+]
