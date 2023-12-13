@@ -6,6 +6,7 @@ import torch.optim as optim
 import transformers
 from functools import partial
 
+import numpy as np
 from tqdm import tqdm
 from tokenizers import AddedToken
 from minlora import add_lora, apply_to_lora, disable_lora, enable_lora, get_lora_params, merge_lora, name_is_lora, remove_lora, load_multiple_lora, select_lora, get_lora_state_dict, LoRAParametrization
@@ -119,12 +120,19 @@ def _train(opt):
     model.resize_token_embeddings(len(text2sql_tokenizer))
 
     if opt.use_lora:
+        for p in model.parameters():
+            p.requires_grad = False
         lora_config = {  # specify which layers to add lora to, by default only add to linear layers
             torch.nn.Linear: {
-                "weight": partial(LoRAParametrization.from_linear, rank=256, lora_alpha=256, lora_dropout_p=0.05),
+                "weight": partial(LoRAParametrization.from_linear, rank=128, lora_alpha=128, lora_dropout_p=0.05),
             },
         }
         add_lora(model, lora_config)
+
+
+    model_parameters = filter(lambda p: p.requires_grad, model.parameters())
+    params = sum([np.prod(p.size()) for p in model_parameters])
+    print('trainable parameters: {}'.format(params))
 
     if torch.cuda.is_available():
         model = model.cuda()
@@ -304,7 +312,7 @@ def _test(opt):
     if opt.use_lora:
         lora_config = {  # specify which layers to add lora to, by default only add to linear layers
             torch.nn.Linear: {
-                "weight": partial(LoRAParametrization.from_linear, rank=256, lora_alpha=256, lora_dropout_p=0.05),
+                "weight": partial(LoRAParametrization.from_linear, rank=128, lora_alpha=128, lora_dropout_p=0.05),
             },
         }
         add_lora(model, lora_config)

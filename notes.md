@@ -86,6 +86,14 @@ sh scripts/inference/infer_text2natsql.sh base-custom spider
     "EXEC": 0.8636363636363636
 }
 
+### dog_kennels dev result w/ pretrained text2natsql-t5-large
+
+{
+  "ckpt": "./models/text2natsql-t5-large/checkpoint-21216",
+  "EM": 0.6666666666666666,
+  "EXEC": 0.9047619047619048
+}
+
 ### dog_kennels dev result w/ finetuned lora on text2natsql-t5-base
 
 {
@@ -111,6 +119,14 @@ sh scripts/inference/infer_text2natsql.sh base-custom spider
   "ckpt": "./models/text2natsql-t5-base/checkpoint-14352",
   "EM": 0.4642857142857143,
   "EXEC": 0.6071428571428571
+}
+
+### car dev result w/ pretrained text2natsql-t5-large
+
+{
+  "ckpt": "./models/text2natsql-t5-large/checkpoint-21216",
+  "EM": 0.5,
+  "EXEC": 0.7142857142857143
 }
 
 ### car dev result w/ finetuned lora on text2natsql-t5-base
