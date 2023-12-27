@@ -145,7 +145,7 @@ sh dog_kennels/train_text2natsql_t5_base_lora.sh
 
 ```json
 { "ckpt": "./models/text2natsql-t5-base/checkpoint-14352", "EM": 0.4642857142857143, "EXEC": 0.6071428571428571 }
-```json
+```
 
 **car dev result w/ pretrained text2natsql-t5-large**
 
